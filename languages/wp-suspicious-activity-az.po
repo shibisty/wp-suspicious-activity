@@ -1,0 +1,403 @@
+# Translation of WP Suspicious Activity Detector.
+# This file is distributed under the same license as the WP Suspicious Activity Detector plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Suspicious Activity Detector 5.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-18T04:14:19+00:00\n"
+"PO-Revision-Date: 2026-09-18T04:14:19+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: manual-build\n"
+
+msgid "1 пристрій"
+msgstr "1 cihaz"
+
+msgid "2 пристрої"
+msgstr "2 cihaz"
+
+msgid "3+ пристрої"
+msgstr "3+ cihaz"
+
+msgid "API"
+msgstr "API"
+
+msgid "Email користувача:"
+msgstr "İstifadəçi e-poçtu:"
+
+msgid "Heartbeat"
+msgstr "Heartbeat"
+
+msgid "Heartbeat-запити забезпечують точний підрахунок часу, поки вкладка відкрита."
+msgstr "Heartbeat sorğuları vərəq açıq qaldığı müddətdə dəqiq vaxt hesablanmasını təmin edir."
+
+msgid "ID запису"
+msgstr "Qeyd ID"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP-адреса"
+msgstr "IP ünvanı"
+
+msgid "Session ID"
+msgstr "Sessiya ID"
+
+msgid "User-Agent"
+msgstr "User-Agent"
+
+msgid "Інтервал (сек)"
+msgstr "İnterval (san)"
+
+msgid "Адмінка"
+msgstr "Admin paneli"
+
+msgid "Адміністратори"
+msgstr "Administratorlar"
+
+msgid "Активність"
+msgstr "Fəaliyyət"
+
+msgid "Аудиторія"
+msgstr "Auditoriya"
+
+msgid "Без паралельної активності"
+msgstr "Paralel fəaliyyət yoxdur"
+
+msgid "Високий"
+msgstr "Yüksək"
+
+msgid "Вперед ›"
+msgstr "İrəli ›"
+
+msgid "Всього записів:"
+msgstr "Cəmi qeydlər:"
+
+msgid "Всі користувачі"
+msgstr "Bütün istifadəçilər"
+
+msgid "Всі сторінки, API та адмінка (максимальна видимість)"
+msgstr "Bütün səhifələr, API və admin paneli (maksimum görünürlük)"
+
+msgid "Всі типи"
+msgstr "Bütün növlər"
+
+msgid "Гість"
+msgstr "Qonaq"
+
+msgid "Дата від:"
+msgstr "Tarix başlanğıc:"
+
+msgid "Дата до:"
+msgstr "Tarix bitmə:"
+
+msgid "Дата й час"
+msgstr "Tarix və vaxt"
+
+msgid "Детектор підозрілої активності"
+msgstr "Şübhəli fəaliyyət detektoru"
+
+msgid "Діагностика:"
+msgstr "Diaqnostika:"
+
+msgid "Діапазон (хв)"
+msgstr "Diapazon (dəq)"
+
+msgid "Діапазон = сума всіх активних проміжків (реальний час на сайті)."
+msgstr "Diapazon = bütün aktiv fasilələrin cəmi (saytda real vaxt)."
+
+msgid "Діапазон логування"
+msgstr "Qeydiyyat əhatəsi"
+
+msgid "Дії"
+msgstr "Əməliyyatlar"
+
+msgid "З"
+msgstr "Başlanğıc"
+
+msgid "За вказаними критеріями даних не знайдено."
+msgstr "Göstərilən meyarlar üzrə məlumat tapılmadı."
+
+msgid "За вказаними критеріями записів не знайдено."
+msgstr "Göstərilən meyarlar üzrə qeyd tapılmadı."
+
+msgid "За період:"
+msgstr "Dövr üçün:"
+
+msgid "Завжди"
+msgstr "Həmişə"
+
+msgid "Запис не знайдено."
+msgstr "Qeyd tapılmadı."
+
+msgid "Запити"
+msgstr "Sorğular"
+
+msgid "Запити сортуються по часу. Якщо розрив між сусідніми запитами ≤ 5 хв — це одна сесія, час додається."
+msgstr "Sorğular vaxta görə sıralanır. Qonşu sorğular arasında fasilə ≤ 5 dəq olarsa, bu bir sessiyadır və vaxt toplanır."
+
+msgid "Зареєстровані"
+msgstr "Qeydiyyatlı"
+
+msgid "Застосувати фільтри"
+msgstr "Filtrləri tətbiq et"
+
+msgid "Зберегти налаштування"
+msgstr "Parametrləri yadda saxla"
+
+msgid "Збільшити"
+msgstr "Böyüt"
+
+msgid "Зменшити"
+msgstr "Kiçilt"
+
+msgid "Знайдено записів:"
+msgstr "Tapılan qeydlər:"
+
+msgid "Знайдено користувачів:"
+msgstr "Tapılan istifadəçilər:"
+
+msgid "Коли логувати"
+msgstr "Nə vaxt qeydiyyat aparılsın"
+
+msgid "Користувач"
+msgstr "İstifadəçi"
+
+msgid "Користувача не вказано."
+msgstr "İstifadəçi göstərilməyib."
+
+msgid "Коротке перетинання: %s хв"
+msgstr "Qısa üst-üstə düşmə: %s dəq"
+
+msgid "Курси"
+msgstr "Kurslar"
+
+msgid "Лог запитів"
+msgstr "Sorğu jurnalı"
+
+msgid "Логи"
+msgstr "Jurnallar"
+
+msgid "Логувати для всіх (включно з гостями)"
+msgstr "Hamı üçün qeydiyyat (qonaqlar daxil olmaqla)"
+
+msgid "Логіка підрахунку часу (сесійний метод):"
+msgstr "Vaxt hesablama məntiqi (sessiya metodu):"
+
+msgid "Мова"
+msgstr "Dil"
+
+msgid "Мова інтерфейсу плагіна"
+msgstr "Əlavənin interfeys dili"
+
+msgid "Мін. унікальних IP:"
+msgstr "Min. unikal IP:"
+
+msgid "Налаштування"
+msgstr "Parametrlər"
+
+msgid "Налаштування збережено."
+msgstr "Parametrlər yadda saxlanıldı."
+
+msgid "Налаштування підозрілої активності"
+msgstr "Şübhəli fəaliyyət parametrləri"
+
+msgid "Неактивний"
+msgstr "Qeyri-aktiv"
+
+msgid "Недостатньо даних"
+msgstr "Kifayət qədər məlumat yoxdur"
+
+msgid "Недостатньо прав"
+msgstr "Kifayət qədər hüquq yoxdur"
+
+msgid "Немає даних для побудови таймлайну за обраний період."
+msgstr "Seçilmiş dövr üçün zaman xətti qurmaq üçün məlumat yoxdur."
+
+msgid "Низький"
+msgstr "Aşağı"
+
+msgid "Паралельна робота пристроїв: %s хв"
+msgstr "Cihazların paralel işi: %s dəq"
+
+msgid "Паралельний час = Сумарно − Діапазон. Якщо > 0, пристрої працювали одночасно."
+msgstr "Paralel vaxt = Cəmi − Diapazon. > 0 olarsa, cihazlar eyni vaxtda işləyib."
+
+msgid "Паралельно (хв)"
+msgstr "Paralel (dəq)"
+
+msgid "Параметри"
+msgstr "Parametrlər"
+
+msgid "Перевірте діагностику вище."
+msgstr "Yuxarıdakı diaqnostikanı yoxlayın."
+
+msgid "Перегляд"
+msgstr "Baxış"
+
+msgid "Перегляд активності"
+msgstr "Fəaliyyətə baxış"
+
+msgid "Перегляд логу"
+msgstr "Jurnala baxış"
+
+msgid "Переглянути"
+msgstr "Bax"
+
+msgid "Перестати логувати"
+msgstr "Qeydiyyatı dayandır"
+
+msgid "Період"
+msgstr "Dövr"
+
+msgid "Показати всі логи цього користувача"
+msgstr "Bu istifadəçinin bütün jurnallarını göstər"
+
+msgid "Показати ▼"
+msgstr "Göstər ▼"
+
+msgid "Помилка SQL:"
+msgstr "SQL xətası:"
+
+msgid "Пристрої"
+msgstr "Cihazlar"
+
+msgid "Пристрої працювали одночасно"
+msgstr "Cihazlar eyni vaxtda işləyib"
+
+msgid "Пристрій"
+msgstr "Cihaz"
+
+msgid "Пристрій (User-Agent містить):"
+msgstr "Cihaz (User-Agent tərkibində):"
+
+msgid "Проміжок часу"
+msgstr "Zaman pəncərəsi"
+
+msgid "Підозріла активність"
+msgstr "Şübhəli fəaliyyət"
+
+msgid "Результатів запиту:"
+msgstr "Sorğu nəticələri:"
+
+msgid "Ризик"
+msgstr "Risk"
+
+msgid "Розрив (користувач вийшов)"
+msgstr "Fasilə (istifadəçi çıxıb)"
+
+msgid "Розрив: %s"
+msgstr "Fasilə: %s"
+
+msgid "Розривів > 5 хв"
+msgstr "Fasilələr > 5 dəq"
+
+msgid "Середній"
+msgstr "Orta"
+
+msgid "Сесій"
+msgstr "Sessiyalar"
+
+msgid "Сесій: %d | Розривів > 5 хв: %d"
+msgstr "Sessiyalar: %d | Fasilələr > 5 dəq: %d"
+
+msgid "Скинути"
+msgstr "Sıfırla"
+
+msgid "До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін."
+msgstr "Siyahıya saytda quraşdırılmış WordPress dil paketləri, həmçinin bu əlavəyə daxil edilmiş tərcümələr daxildir."
+
+msgid "Стан"
+msgstr "Vəziyyət"
+
+msgid "Сторінка"
+msgstr "Səhifə"
+
+msgid "Сумарно (хв)"
+msgstr "Cəmi (dəq)"
+
+msgid "Сумарно по пристроях (хв)"
+msgstr "Cihazlar üzrə cəmi (dəq)"
+
+msgid "Сумарно по пристроях = сума активного часу кожного пристрою окремо."
+msgstr "Cihazlar üzrə cəmi = hər bir cihazın aktiv vaxtının ayrı-ayrılıqda cəmi."
+
+msgid "Сусідні запити цього користувача (±15 хв)"
+msgstr "Bu istifadəçinin qonşu sorğuları (±15 dəq)"
+
+msgid "Таблиця:"
+msgstr "Cədvəl:"
+
+msgid "Тип"
+msgstr "Növ"
+
+msgid "Тип запиту"
+msgstr "Sorğu növü"
+
+msgid "Тип запиту:"
+msgstr "Sorğu növü:"
+
+msgid "Тип користувача:"
+msgstr "İstifadəçi növü:"
+
+msgid "Тільки адмінка та heartbeat"
+msgstr "Yalnız admin paneli və heartbeat"
+
+msgid "Тільки для адміністраторів"
+msgstr "Yalnız administratorlar üçün"
+
+msgid "Тільки для зареєстрованих користувачів"
+msgstr "Yalnız qeydiyyatlı istifadəçilər üçün"
+
+msgid "Тільки сайт без адмінки та heartbeat"
+msgstr "Yalnız sayt, admin paneli istisna olmaqla, və heartbeat"
+
+msgid "Тільки сторінки та heartbeat"
+msgstr "Yalnız səhifələr və heartbeat"
+
+msgid "Увімкнути heartbeat (пінг, поки вкладка відкрита)"
+msgstr "Heartbeat-i aktivləşdir (vərəq açıq olduqda ping)"
+
+msgid "Унікальних user_id:"
+msgstr "Unikal user_id:"
+
+msgid "Хто підпадає під логування"
+msgstr "Kimlər qeydiyyata düşür"
+
+msgid "Час"
+msgstr "Vaxt"
+
+msgid "Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується."
+msgstr "Saytın gün ərzindəki vaxtı. Gecə yarısını keçən vaxt aralığı (məs. 22:00–06:00) dəstəklənir."
+
+msgid "Часова шкала"
+msgstr "Zaman xətti"
+
+msgid "Шлях"
+msgstr "Yol"
+
+msgid "Що логувати"
+msgstr "Nə qeydiyyata alınsın"
+
+msgid "Якщо розрив > 5 хв — користувач вийшов, розрив НЕ рахується."
+msgstr "Fasilə > 5 dəq olarsa, istifadəçi çıxıb, fasilə hesablanmır."
+
+msgid "по"
+msgstr "bitmə"
+
+msgid "— мова сайту за замовчуванням —"
+msgstr "— saytın standart dili —"
+
+msgid "‹ Назад"
+msgstr "‹ Geri"
+
+msgid "← До списку активності"
+msgstr "← Fəaliyyət siyahısına"
+
+msgid "← До списку логів"
+msgstr "← Jurnal siyahısına"

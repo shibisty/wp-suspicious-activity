@@ -1,0 +1,403 @@
+# Translation of WP Suspicious Activity Detector.
+# This file is distributed under the same license as the WP Suspicious Activity Detector plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Suspicious Activity Detector 5.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-18T04:14:19+00:00\n"
+"PO-Revision-Date: 2026-09-18T04:14:19+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: manual-build\n"
+
+msgid "1 пристрій"
+msgstr "1 台设备"
+
+msgid "2 пристрої"
+msgstr "2 台设备"
+
+msgid "3+ пристрої"
+msgstr "3+ 台设备"
+
+msgid "API"
+msgstr "API"
+
+msgid "Email користувача:"
+msgstr "用户邮箱："
+
+msgid "Heartbeat"
+msgstr "Heartbeat"
+
+msgid "Heartbeat-запити забезпечують точний підрахунок часу, поки вкладка відкрита."
+msgstr "只要标签页保持打开，Heartbeat 请求就能确保时间统计准确。"
+
+msgid "ID запису"
+msgstr "记录 ID"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP-адреса"
+msgstr "IP 地址"
+
+msgid "Session ID"
+msgstr "会话 ID"
+
+msgid "User-Agent"
+msgstr "User-Agent"
+
+msgid "Інтервал (сек)"
+msgstr "间隔（秒）"
+
+msgid "Адмінка"
+msgstr "管理后台"
+
+msgid "Адміністратори"
+msgstr "管理员"
+
+msgid "Активність"
+msgstr "活动"
+
+msgid "Аудиторія"
+msgstr "受众"
+
+msgid "Без паралельної активності"
+msgstr "无并行活动"
+
+msgid "Високий"
+msgstr "高"
+
+msgid "Вперед ›"
+msgstr "下一页 ›"
+
+msgid "Всього записів:"
+msgstr "记录总数："
+
+msgid "Всі користувачі"
+msgstr "所有用户"
+
+msgid "Всі сторінки, API та адмінка (максимальна видимість)"
+msgstr "所有页面、API 和管理后台（最大可见度）"
+
+msgid "Всі типи"
+msgstr "所有类型"
+
+msgid "Гість"
+msgstr "访客"
+
+msgid "Дата від:"
+msgstr "起始日期："
+
+msgid "Дата до:"
+msgstr "结束日期："
+
+msgid "Дата й час"
+msgstr "日期和时间"
+
+msgid "Детектор підозрілої активності"
+msgstr "可疑活动检测器"
+
+msgid "Діагностика:"
+msgstr "诊断："
+
+msgid "Діапазон (хв)"
+msgstr "范围（分钟）"
+
+msgid "Діапазон = сума всіх активних проміжків (реальний час на сайті)."
+msgstr "范围 = 所有活跃时段之和（在网站上的实际时间）。"
+
+msgid "Діапазон логування"
+msgstr "记录范围"
+
+msgid "Дії"
+msgstr "操作"
+
+msgid "З"
+msgstr "从"
+
+msgid "За вказаними критеріями даних не знайдено."
+msgstr "未找到符合指定条件的数据。"
+
+msgid "За вказаними критеріями записів не знайдено."
+msgstr "未找到符合指定条件的记录。"
+
+msgid "За період:"
+msgstr "时间段："
+
+msgid "Завжди"
+msgstr "始终"
+
+msgid "Запис не знайдено."
+msgstr "未找到该记录。"
+
+msgid "Запити"
+msgstr "请求"
+
+msgid "Запити сортуються по часу. Якщо розрив між сусідніми запитами ≤ 5 хв — це одна сесія, час додається."
+msgstr "请求按时间排序。如果相邻请求之间的间隔 ≤ 5 分钟，则视为同一会话，时间累加。"
+
+msgid "Зареєстровані"
+msgstr "已注册"
+
+msgid "Застосувати фільтри"
+msgstr "应用筛选"
+
+msgid "Зберегти налаштування"
+msgstr "保存设置"
+
+msgid "Збільшити"
+msgstr "放大"
+
+msgid "Зменшити"
+msgstr "缩小"
+
+msgid "Знайдено записів:"
+msgstr "找到的记录："
+
+msgid "Знайдено користувачів:"
+msgstr "找到的用户："
+
+msgid "Коли логувати"
+msgstr "何时记录"
+
+msgid "Користувач"
+msgstr "用户"
+
+msgid "Користувача не вказано."
+msgstr "未指定用户。"
+
+msgid "Коротке перетинання: %s хв"
+msgstr "短暂重叠：%s 分钟"
+
+msgid "Курси"
+msgstr "课程"
+
+msgid "Лог запитів"
+msgstr "请求日志"
+
+msgid "Логи"
+msgstr "日志"
+
+msgid "Логувати для всіх (включно з гостями)"
+msgstr "为所有人记录（包括访客）"
+
+msgid "Логіка підрахунку часу (сесійний метод):"
+msgstr "时间计算逻辑（会话法）："
+
+msgid "Мова"
+msgstr "语言"
+
+msgid "Мова інтерфейсу плагіна"
+msgstr "插件界面语言"
+
+msgid "Мін. унікальних IP:"
+msgstr "最少唯一 IP 数："
+
+msgid "Налаштування"
+msgstr "设置"
+
+msgid "Налаштування збережено."
+msgstr "设置已保存。"
+
+msgid "Налаштування підозрілої активності"
+msgstr "可疑活动设置"
+
+msgid "Неактивний"
+msgstr "未激活"
+
+msgid "Недостатньо даних"
+msgstr "数据不足"
+
+msgid "Недостатньо прав"
+msgstr "权限不足"
+
+msgid "Немає даних для побудови таймлайну за обраний період."
+msgstr "所选时间段内没有可用于构建时间线的数据。"
+
+msgid "Низький"
+msgstr "低"
+
+msgid "Паралельна робота пристроїв: %s хв"
+msgstr "设备并行使用：%s 分钟"
+
+msgid "Паралельний час = Сумарно − Діапазон. Якщо > 0, пристрої працювали одночасно."
+msgstr "并行时间 = 总计 − 范围。若 > 0，说明设备曾同时活动。"
+
+msgid "Паралельно (хв)"
+msgstr "并行（分钟）"
+
+msgid "Параметри"
+msgstr "参数"
+
+msgid "Перевірте діагностику вище."
+msgstr "请查看上方的诊断信息。"
+
+msgid "Перегляд"
+msgstr "查看"
+
+msgid "Перегляд активності"
+msgstr "活动详情"
+
+msgid "Перегляд логу"
+msgstr "日志详情"
+
+msgid "Переглянути"
+msgstr "查看"
+
+msgid "Перестати логувати"
+msgstr "停止记录"
+
+msgid "Період"
+msgstr "时间段"
+
+msgid "Показати всі логи цього користувача"
+msgstr "显示该用户的所有日志"
+
+msgid "Показати ▼"
+msgstr "显示 ▼"
+
+msgid "Помилка SQL:"
+msgstr "SQL 错误："
+
+msgid "Пристрої"
+msgstr "设备"
+
+msgid "Пристрої працювали одночасно"
+msgstr "设备曾同时活动"
+
+msgid "Пристрій"
+msgstr "设备"
+
+msgid "Пристрій (User-Agent містить):"
+msgstr "设备（User-Agent 包含）："
+
+msgid "Проміжок часу"
+msgstr "时间窗口"
+
+msgid "Підозріла активність"
+msgstr "可疑活动"
+
+msgid "Результатів запиту:"
+msgstr "查询结果："
+
+msgid "Ризик"
+msgstr "风险"
+
+msgid "Розрив (користувач вийшов)"
+msgstr "间隔（用户已离开）"
+
+msgid "Розрив: %s"
+msgstr "间隔：%s"
+
+msgid "Розривів > 5 хв"
+msgstr "超过 5 分钟的间隔"
+
+msgid "Середній"
+msgstr "中等"
+
+msgid "Сесій"
+msgstr "会话数"
+
+msgid "Сесій: %d | Розривів > 5 хв: %d"
+msgstr "会话数：%d | 超过 5 分钟的间隔：%d"
+
+msgid "Скинути"
+msgstr "重置"
+
+msgid "До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін."
+msgstr "列表包含站点上已安装的 WordPress 语言包，以及内置于本插件中的翻译。"
+
+msgid "Стан"
+msgstr "状态"
+
+msgid "Сторінка"
+msgstr "页面"
+
+msgid "Сумарно (хв)"
+msgstr "总计（分钟）"
+
+msgid "Сумарно по пристроях (хв)"
+msgstr "按设备汇总（分钟）"
+
+msgid "Сумарно по пристроях = сума активного часу кожного пристрою окремо."
+msgstr "按设备汇总 = 每台设备各自活跃时间之和。"
+
+msgid "Сусідні запити цього користувача (±15 хв)"
+msgstr "该用户的相邻请求（±15 分钟）"
+
+msgid "Таблиця:"
+msgstr "数据表："
+
+msgid "Тип"
+msgstr "类型"
+
+msgid "Тип запиту"
+msgstr "请求类型"
+
+msgid "Тип запиту:"
+msgstr "请求类型："
+
+msgid "Тип користувача:"
+msgstr "用户类型："
+
+msgid "Тільки адмінка та heartbeat"
+msgstr "仅管理后台和 heartbeat"
+
+msgid "Тільки для адміністраторів"
+msgstr "仅限管理员"
+
+msgid "Тільки для зареєстрованих користувачів"
+msgstr "仅限已注册用户"
+
+msgid "Тільки сайт без адмінки та heartbeat"
+msgstr "仅网站前台（不含管理后台），及 heartbeat"
+
+msgid "Тільки сторінки та heartbeat"
+msgstr "仅页面和 heartbeat"
+
+msgid "Увімкнути heartbeat (пінг, поки вкладка відкрита)"
+msgstr "启用 heartbeat（标签页打开时发送 ping）"
+
+msgid "Унікальних user_id:"
+msgstr "唯一 user_id 数："
+
+msgid "Хто підпадає під логування"
+msgstr "哪些用户会被记录"
+
+msgid "Час"
+msgstr "时间"
+
+msgid "Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується."
+msgstr "站点当地时间。支持跨越午夜的时间段（例如 22:00–06:00）。"
+
+msgid "Часова шкала"
+msgstr "时间线"
+
+msgid "Шлях"
+msgstr "路径"
+
+msgid "Що логувати"
+msgstr "记录哪些内容"
+
+msgid "Якщо розрив > 5 хв — користувач вийшов, розрив НЕ рахується."
+msgstr "如果间隔超过 5 分钟，则视为用户已离开，该间隔不计入统计。"
+
+msgid "по"
+msgstr "至"
+
+msgid "— мова сайту за замовчуванням —"
+msgstr "— 站点默认语言 —"
+
+msgid "‹ Назад"
+msgstr "‹ 返回"
+
+msgid "← До списку активності"
+msgstr "← 返回活动列表"
+
+msgid "← До списку логів"
+msgstr "← 返回日志列表"

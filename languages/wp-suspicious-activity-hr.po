@@ -1,0 +1,403 @@
+# Translation of WP Suspicious Activity Detector.
+# This file is distributed under the same license as the WP Suspicious Activity Detector plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Suspicious Activity Detector 5.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-18T04:14:19+00:00\n"
+"PO-Revision-Date: 2026-09-18T04:14:19+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: manual-build\n"
+
+msgid "1 пристрій"
+msgstr "1 uređaj"
+
+msgid "2 пристрої"
+msgstr "2 uređaja"
+
+msgid "3+ пристрої"
+msgstr "3+ uređaja"
+
+msgid "API"
+msgstr "API"
+
+msgid "Email користувача:"
+msgstr "E-mail korisnika:"
+
+msgid "Heartbeat"
+msgstr "Heartbeat"
+
+msgid "Heartbeat-запити забезпечують точний підрахунок часу, поки вкладка відкрита."
+msgstr "Heartbeat zahtjevi osiguravaju točno brojanje vremena dok je kartica otvorena."
+
+msgid "ID запису"
+msgstr "ID zapisa"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP-адреса"
+msgstr "IP adresa"
+
+msgid "Session ID"
+msgstr "ID sesije"
+
+msgid "User-Agent"
+msgstr "User-Agent"
+
+msgid "Інтервал (сек)"
+msgstr "Interval (sek.)"
+
+msgid "Адмінка"
+msgstr "Administracijsko područje"
+
+msgid "Адміністратори"
+msgstr "Administratori"
+
+msgid "Активність"
+msgstr "Aktivnost"
+
+msgid "Аудиторія"
+msgstr "Publika"
+
+msgid "Без паралельної активності"
+msgstr "Bez paralelne aktivnosti"
+
+msgid "Високий"
+msgstr "Visok"
+
+msgid "Вперед ›"
+msgstr "Naprijed ›"
+
+msgid "Всього записів:"
+msgstr "Ukupno zapisa:"
+
+msgid "Всі користувачі"
+msgstr "Svi korisnici"
+
+msgid "Всі сторінки, API та адмінка (максимальна видимість)"
+msgstr "Sve stranice, API i administracijsko područje (maksimalna vidljivost)"
+
+msgid "Всі типи"
+msgstr "Svi tipovi"
+
+msgid "Гість"
+msgstr "Gost"
+
+msgid "Дата від:"
+msgstr "Datum od:"
+
+msgid "Дата до:"
+msgstr "Datum do:"
+
+msgid "Дата й час"
+msgstr "Datum i vrijeme"
+
+msgid "Детектор підозрілої активності"
+msgstr "Detektor sumnjive aktivnosti"
+
+msgid "Діагностика:"
+msgstr "Dijagnostika:"
+
+msgid "Діапазон (хв)"
+msgstr "Raspon (min)"
+
+msgid "Діапазон = сума всіх активних проміжків (реальний час на сайті)."
+msgstr "Raspon = zbroj svih aktivnih razdoblja (stvarno vrijeme na stranici)."
+
+msgid "Діапазон логування"
+msgstr "Opseg zapisivanja"
+
+msgid "Дії"
+msgstr "Radnje"
+
+msgid "З"
+msgstr "Od"
+
+msgid "За вказаними критеріями даних не знайдено."
+msgstr "Nema podataka za navedene kriterije."
+
+msgid "За вказаними критеріями записів не знайдено."
+msgstr "Nema zapisa za navedene kriterije."
+
+msgid "За період:"
+msgstr "Za razdoblje:"
+
+msgid "Завжди"
+msgstr "Uvijek"
+
+msgid "Запис не знайдено."
+msgstr "Zapis nije pronađen."
+
+msgid "Запити"
+msgstr "Zahtjevi"
+
+msgid "Запити сортуються по часу. Якщо розрив між сусідніми запитами ≤ 5 хв — це одна сесія, час додається."
+msgstr "Zahtjevi se sortiraju po vremenu. Ako je razmak između susjednih zahtjeva ≤ 5 min, to je jedna sesija i vrijeme se zbraja."
+
+msgid "Зареєстровані"
+msgstr "Registrirani"
+
+msgid "Застосувати фільтри"
+msgstr "Primijeni filtre"
+
+msgid "Зберегти налаштування"
+msgstr "Spremi postavke"
+
+msgid "Збільшити"
+msgstr "Povećaj"
+
+msgid "Зменшити"
+msgstr "Smanji"
+
+msgid "Знайдено записів:"
+msgstr "Pronađeno zapisa:"
+
+msgid "Знайдено користувачів:"
+msgstr "Pronađeno korisnika:"
+
+msgid "Коли логувати"
+msgstr "Kada zapisivati"
+
+msgid "Користувач"
+msgstr "Korisnik"
+
+msgid "Користувача не вказано."
+msgstr "Korisnik nije naveden."
+
+msgid "Коротке перетинання: %s хв"
+msgstr "Kratko preklapanje: %s min"
+
+msgid "Курси"
+msgstr "Tečajevi"
+
+msgid "Лог запитів"
+msgstr "Zapisnik zahtjeva"
+
+msgid "Логи"
+msgstr "Zapisnici"
+
+msgid "Логувати для всіх (включно з гостями)"
+msgstr "Zapisuj za sve (uključujući goste)"
+
+msgid "Логіка підрахунку часу (сесійний метод):"
+msgstr "Logika izračuna vremena (metoda sesije):"
+
+msgid "Мова"
+msgstr "Jezik"
+
+msgid "Мова інтерфейсу плагіна"
+msgstr "Jezik sučelja dodatka"
+
+msgid "Мін. унікальних IP:"
+msgstr "Min. jedinstvenih IP-ova:"
+
+msgid "Налаштування"
+msgstr "Postavke"
+
+msgid "Налаштування збережено."
+msgstr "Postavke su spremljene."
+
+msgid "Налаштування підозрілої активності"
+msgstr "Postavke sumnjive aktivnosti"
+
+msgid "Неактивний"
+msgstr "Neaktivan"
+
+msgid "Недостатньо даних"
+msgstr "Nedovoljno podataka"
+
+msgid "Недостатньо прав"
+msgstr "Nedovoljno prava"
+
+msgid "Немає даних для побудови таймлайну за обраний період."
+msgstr "Nema podataka za izradu vremenske crte za odabrano razdoblje."
+
+msgid "Низький"
+msgstr "Nizak"
+
+msgid "Паралельна робота пристроїв: %s хв"
+msgstr "Paralelan rad uređaja: %s min"
+
+msgid "Паралельний час = Сумарно − Діапазон. Якщо > 0, пристрої працювали одночасно."
+msgstr "Paralelno vrijeme = Ukupno − Raspon. Ako je > 0, uređaji su radili istovremeno."
+
+msgid "Паралельно (хв)"
+msgstr "Paralelno (min)"
+
+msgid "Параметри"
+msgstr "Parametri"
+
+msgid "Перевірте діагностику вище."
+msgstr "Provjerite dijagnostiku iznad."
+
+msgid "Перегляд"
+msgstr "Pregled"
+
+msgid "Перегляд активності"
+msgstr "Pregled aktivnosti"
+
+msgid "Перегляд логу"
+msgstr "Pregled zapisa"
+
+msgid "Переглянути"
+msgstr "Pregledaj"
+
+msgid "Перестати логувати"
+msgstr "Zaustavi zapisivanje"
+
+msgid "Період"
+msgstr "Razdoblje"
+
+msgid "Показати всі логи цього користувача"
+msgstr "Prikaži sve zapise ovog korisnika"
+
+msgid "Показати ▼"
+msgstr "Prikaži ▼"
+
+msgid "Помилка SQL:"
+msgstr "SQL pogreška:"
+
+msgid "Пристрої"
+msgstr "Uređaji"
+
+msgid "Пристрої працювали одночасно"
+msgstr "Uređaji su radili istovremeno"
+
+msgid "Пристрій"
+msgstr "Uređaj"
+
+msgid "Пристрій (User-Agent містить):"
+msgstr "Uređaj (User-Agent sadrži):"
+
+msgid "Проміжок часу"
+msgstr "Vremenski okvir"
+
+msgid "Підозріла активність"
+msgstr "Sumnjiva aktivnost"
+
+msgid "Результатів запиту:"
+msgstr "Rezultati upita:"
+
+msgid "Ризик"
+msgstr "Rizik"
+
+msgid "Розрив (користувач вийшов)"
+msgstr "Prekid (korisnik je otišao)"
+
+msgid "Розрив: %s"
+msgstr "Prekid: %s"
+
+msgid "Розривів > 5 хв"
+msgstr "Prekida > 5 min"
+
+msgid "Середній"
+msgstr "Srednji"
+
+msgid "Сесій"
+msgstr "Sesije"
+
+msgid "Сесій: %d | Розривів > 5 хв: %d"
+msgstr "Sesije: %d | Prekida > 5 min: %d"
+
+msgid "Скинути"
+msgstr "Poništi"
+
+msgid "До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін."
+msgstr "Popis uključuje WordPress jezične pakete instalirane na stranici, kao i prijevode ugrađene u ovaj dodatak."
+
+msgid "Стан"
+msgstr "Stanje"
+
+msgid "Сторінка"
+msgstr "Stranica"
+
+msgid "Сумарно (хв)"
+msgstr "Ukupno (min)"
+
+msgid "Сумарно по пристроях (хв)"
+msgstr "Ukupno po uređajima (min)"
+
+msgid "Сумарно по пристроях = сума активного часу кожного пристрою окремо."
+msgstr "Ukupno po uređajima = zbroj aktivnog vremena svakog uređaja zasebno."
+
+msgid "Сусідні запити цього користувача (±15 хв)"
+msgstr "Susjedni zahtjevi ovog korisnika (±15 min)"
+
+msgid "Таблиця:"
+msgstr "Tablica:"
+
+msgid "Тип"
+msgstr "Tip"
+
+msgid "Тип запиту"
+msgstr "Tip zahtjeva"
+
+msgid "Тип запиту:"
+msgstr "Tip zahtjeva:"
+
+msgid "Тип користувача:"
+msgstr "Tip korisnika:"
+
+msgid "Тільки адмінка та heartbeat"
+msgstr "Samo administracijsko područje i heartbeat"
+
+msgid "Тільки для адміністраторів"
+msgstr "Samo za administratore"
+
+msgid "Тільки для зареєстрованих користувачів"
+msgstr "Samo za registrirane korisnike"
+
+msgid "Тільки сайт без адмінки та heartbeat"
+msgstr "Samo stranica, bez administracijskog područja, i heartbeat"
+
+msgid "Тільки сторінки та heartbeat"
+msgstr "Samo stranice i heartbeat"
+
+msgid "Увімкнути heartbeat (пінг, поки вкладка відкрита)"
+msgstr "Uključi heartbeat (ping dok je kartica otvorena)"
+
+msgid "Унікальних user_id:"
+msgstr "Jedinstvenih user_id:"
+
+msgid "Хто підпадає під логування"
+msgstr "Tko podliježe zapisivanju"
+
+msgid "Час"
+msgstr "Vrijeme"
+
+msgid "Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується."
+msgstr "Doba dana stranice. Podržan je vremenski okvir koji prelazi ponoć (npr. 22:00–06:00)."
+
+msgid "Часова шкала"
+msgstr "Vremenska crta"
+
+msgid "Шлях"
+msgstr "Putanja"
+
+msgid "Що логувати"
+msgstr "Što zapisivati"
+
+msgid "Якщо розрив > 5 хв — користувач вийшов, розрив НЕ рахується."
+msgstr "Ako je prekid > 5 min, korisnik je otišao, prekid se NE računa."
+
+msgid "по"
+msgstr "do"
+
+msgid "— мова сайту за замовчуванням —"
+msgstr "— zadani jezik stranice —"
+
+msgid "‹ Назад"
+msgstr "‹ Natrag"
+
+msgid "← До списку активності"
+msgstr "← Na popis aktivnosti"
+
+msgid "← До списку логів"
+msgstr "← Na popis zapisa"

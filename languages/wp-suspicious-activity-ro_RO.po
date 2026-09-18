@@ -1,0 +1,403 @@
+# Translation of WP Suspicious Activity Detector.
+# This file is distributed under the same license as the WP Suspicious Activity Detector plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Suspicious Activity Detector 5.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-18T04:14:19+00:00\n"
+"PO-Revision-Date: 2026-09-18T04:14:19+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"X-Generator: manual-build\n"
+
+msgid "1 пристрій"
+msgstr "1 dispozitiv"
+
+msgid "2 пристрої"
+msgstr "2 dispozitive"
+
+msgid "3+ пристрої"
+msgstr "3+ dispozitive"
+
+msgid "API"
+msgstr "API"
+
+msgid "Email користувача:"
+msgstr "E-mailul utilizatorului:"
+
+msgid "Heartbeat"
+msgstr "Heartbeat"
+
+msgid "Heartbeat-запити забезпечують точний підрахунок часу, поки вкладка відкрита."
+msgstr "Cererile heartbeat asigură un calcul precis al timpului cât timp fila este deschisă."
+
+msgid "ID запису"
+msgstr "ID înregistrare"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP-адреса"
+msgstr "Adresă IP"
+
+msgid "Session ID"
+msgstr "ID sesiune"
+
+msgid "User-Agent"
+msgstr "User-Agent"
+
+msgid "Інтервал (сек)"
+msgstr "Interval (sec)"
+
+msgid "Адмінка"
+msgstr "Zona de administrare"
+
+msgid "Адміністратори"
+msgstr "Administratori"
+
+msgid "Активність"
+msgstr "Activitate"
+
+msgid "Аудиторія"
+msgstr "Public"
+
+msgid "Без паралельної активності"
+msgstr "Fără activitate paralelă"
+
+msgid "Високий"
+msgstr "Ridicat"
+
+msgid "Вперед ›"
+msgstr "Înainte ›"
+
+msgid "Всього записів:"
+msgstr "Total înregistrări:"
+
+msgid "Всі користувачі"
+msgstr "Toți utilizatorii"
+
+msgid "Всі сторінки, API та адмінка (максимальна видимість)"
+msgstr "Toate paginile, API-ul și zona de administrare (vizibilitate maximă)"
+
+msgid "Всі типи"
+msgstr "Toate tipurile"
+
+msgid "Гість"
+msgstr "Vizitator"
+
+msgid "Дата від:"
+msgstr "Data de la:"
+
+msgid "Дата до:"
+msgstr "Data până la:"
+
+msgid "Дата й час"
+msgstr "Data și ora"
+
+msgid "Детектор підозрілої активності"
+msgstr "Detector de activitate suspectă"
+
+msgid "Діагностика:"
+msgstr "Diagnosticare:"
+
+msgid "Діапазон (хв)"
+msgstr "Interval (min)"
+
+msgid "Діапазон = сума всіх активних проміжків (реальний час на сайті)."
+msgstr "Interval = suma tuturor intervalelor active (timpul real petrecut pe site)."
+
+msgid "Діапазон логування"
+msgstr "Domeniu de înregistrare"
+
+msgid "Дії"
+msgstr "Acțiuni"
+
+msgid "З"
+msgstr "De la"
+
+msgid "За вказаними критеріями даних не знайдено."
+msgstr "Nu s-au găsit date pentru criteriile indicate."
+
+msgid "За вказаними критеріями записів не знайдено."
+msgstr "Nu s-au găsit înregistrări pentru criteriile indicate."
+
+msgid "За період:"
+msgstr "Pentru perioada:"
+
+msgid "Завжди"
+msgstr "Întotdeauna"
+
+msgid "Запис не знайдено."
+msgstr "Înregistrarea nu a fost găsită."
+
+msgid "Запити"
+msgstr "Cereri"
+
+msgid "Запити сортуються по часу. Якщо розрив між сусідніми запитами ≤ 5 хв — це одна сесія, час додається."
+msgstr "Cererile sunt sortate după oră. Dacă intervalul dintre cererile consecutive este ≤ 5 min, este o singură sesiune, iar timpul se adună."
+
+msgid "Зареєстровані"
+msgstr "Înregistrați"
+
+msgid "Застосувати фільтри"
+msgstr "Aplică filtrele"
+
+msgid "Зберегти налаштування"
+msgstr "Salvează setările"
+
+msgid "Збільшити"
+msgstr "Mărește"
+
+msgid "Зменшити"
+msgstr "Micșorează"
+
+msgid "Знайдено записів:"
+msgstr "Înregistrări găsite:"
+
+msgid "Знайдено користувачів:"
+msgstr "Utilizatori găsiți:"
+
+msgid "Коли логувати"
+msgstr "Când se înregistrează"
+
+msgid "Користувач"
+msgstr "Utilizator"
+
+msgid "Користувача не вказано."
+msgstr "Niciun utilizator specificat."
+
+msgid "Коротке перетинання: %s хв"
+msgstr "Suprapunere scurtă: %s min"
+
+msgid "Курси"
+msgstr "Cursuri"
+
+msgid "Лог запитів"
+msgstr "Jurnal de cereri"
+
+msgid "Логи"
+msgstr "Jurnale"
+
+msgid "Логувати для всіх (включно з гостями)"
+msgstr "Înregistrează pentru toți (inclusiv vizitatori)"
+
+msgid "Логіка підрахунку часу (сесійний метод):"
+msgstr "Logica de calcul a timpului (metoda pe sesiuni):"
+
+msgid "Мова"
+msgstr "Limbă"
+
+msgid "Мова інтерфейсу плагіна"
+msgstr "Limba interfeței pluginului"
+
+msgid "Мін. унікальних IP:"
+msgstr "Min. IP-uri unice:"
+
+msgid "Налаштування"
+msgstr "Setări"
+
+msgid "Налаштування збережено."
+msgstr "Setările au fost salvate."
+
+msgid "Налаштування підозрілої активності"
+msgstr "Setări pentru activitate suspectă"
+
+msgid "Неактивний"
+msgstr "Inactiv"
+
+msgid "Недостатньо даних"
+msgstr "Date insuficiente"
+
+msgid "Недостатньо прав"
+msgstr "Drepturi insuficiente"
+
+msgid "Немає даних для побудови таймлайну за обраний період."
+msgstr "Nu există date pentru a construi cronologia pentru perioada selectată."
+
+msgid "Низький"
+msgstr "Scăzut"
+
+msgid "Паралельна робота пристроїв: %s хв"
+msgstr "Activitate paralelă a dispozitivelor: %s min"
+
+msgid "Паралельний час = Сумарно − Діапазон. Якщо > 0, пристрої працювали одночасно."
+msgstr "Timp paralel = Total − Interval. Dacă este > 0, dispozitivele au fost active simultan."
+
+msgid "Паралельно (хв)"
+msgstr "Paralel (min)"
+
+msgid "Параметри"
+msgstr "Parametri"
+
+msgid "Перевірте діагностику вище."
+msgstr "Verificați diagnosticarea de mai sus."
+
+msgid "Перегляд"
+msgstr "Vizualizare"
+
+msgid "Перегляд активності"
+msgstr "Vizualizare activitate"
+
+msgid "Перегляд логу"
+msgstr "Vizualizare jurnal"
+
+msgid "Переглянути"
+msgstr "Vizualizează"
+
+msgid "Перестати логувати"
+msgstr "Oprește înregistrarea"
+
+msgid "Період"
+msgstr "Perioadă"
+
+msgid "Показати всі логи цього користувача"
+msgstr "Afișează toate jurnalele acestui utilizator"
+
+msgid "Показати ▼"
+msgstr "Afișează ▼"
+
+msgid "Помилка SQL:"
+msgstr "Eroare SQL:"
+
+msgid "Пристрої"
+msgstr "Dispozitive"
+
+msgid "Пристрої працювали одночасно"
+msgstr "Dispozitivele au fost active simultan"
+
+msgid "Пристрій"
+msgstr "Dispozitiv"
+
+msgid "Пристрій (User-Agent містить):"
+msgstr "Dispozitiv (User-Agent conține):"
+
+msgid "Проміжок часу"
+msgstr "Interval orar"
+
+msgid "Підозріла активність"
+msgstr "Activitate suspectă"
+
+msgid "Результатів запиту:"
+msgstr "Rezultate interogare:"
+
+msgid "Ризик"
+msgstr "Risc"
+
+msgid "Розрив (користувач вийшов)"
+msgstr "Pauză (utilizatorul a plecat)"
+
+msgid "Розрив: %s"
+msgstr "Pauză: %s"
+
+msgid "Розривів > 5 хв"
+msgstr "Pauze > 5 min"
+
+msgid "Середній"
+msgstr "Mediu"
+
+msgid "Сесій"
+msgstr "Sesiuni"
+
+msgid "Сесій: %d | Розривів > 5 хв: %d"
+msgstr "Sesiuni: %d | Pauze > 5 min: %d"
+
+msgid "Скинути"
+msgstr "Resetează"
+
+msgid "До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін."
+msgstr "Lista include pachetele de limbă WordPress instalate pe site, precum și traducerile incluse în acest plugin."
+
+msgid "Стан"
+msgstr "Stare"
+
+msgid "Сторінка"
+msgstr "Pagină"
+
+msgid "Сумарно (хв)"
+msgstr "Total (min)"
+
+msgid "Сумарно по пристроях (хв)"
+msgstr "Total pe dispozitiv (min)"
+
+msgid "Сумарно по пристроях = сума активного часу кожного пристрою окремо."
+msgstr "Total pe dispozitiv = suma timpului activ al fiecărui dispozitiv separat."
+
+msgid "Сусідні запити цього користувача (±15 хв)"
+msgstr "Cereri apropiate ale acestui utilizator (±15 min)"
+
+msgid "Таблиця:"
+msgstr "Tabel:"
+
+msgid "Тип"
+msgstr "Tip"
+
+msgid "Тип запиту"
+msgstr "Tip de cerere"
+
+msgid "Тип запиту:"
+msgstr "Tip de cerere:"
+
+msgid "Тип користувача:"
+msgstr "Tip de utilizator:"
+
+msgid "Тільки адмінка та heartbeat"
+msgstr "Doar zona de administrare și heartbeat"
+
+msgid "Тільки для адміністраторів"
+msgstr "Doar pentru administratori"
+
+msgid "Тільки для зареєстрованих користувачів"
+msgstr "Doar pentru utilizatorii înregistrați"
+
+msgid "Тільки сайт без адмінки та heartbeat"
+msgstr "Doar site-ul, fără zona de administrare, și heartbeat"
+
+msgid "Тільки сторінки та heartbeat"
+msgstr "Doar paginile și heartbeat"
+
+msgid "Увімкнути heartbeat (пінг, поки вкладка відкрита)"
+msgstr "Activează heartbeat (ping cât timp fila este deschisă)"
+
+msgid "Унікальних user_id:"
+msgstr "user_id unice:"
+
+msgid "Хто підпадає під логування"
+msgstr "Cine este înregistrat"
+
+msgid "Час"
+msgstr "Oră"
+
+msgid "Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується."
+msgstr "Ora locală a site-ului. Este acceptat un interval care traversează miezul nopții (de ex. 22:00–06:00)."
+
+msgid "Часова шкала"
+msgstr "Cronologie"
+
+msgid "Шлях"
+msgstr "Cale"
+
+msgid "Що логувати"
+msgstr "Ce se înregistrează"
+
+msgid "Якщо розрив > 5 хв — користувач вийшов, розрив НЕ рахується."
+msgstr "Dacă pauza este > 5 min, utilizatorul a plecat, iar pauza NU este contorizată."
+
+msgid "по"
+msgstr "până la"
+
+msgid "— мова сайту за замовчуванням —"
+msgstr "— limba implicită a site-ului —"
+
+msgid "‹ Назад"
+msgstr "‹ Înapoi"
+
+msgid "← До списку активності"
+msgstr "← Înapoi la lista de activitate"
+
+msgid "← До списку логів"
+msgstr "← Înapoi la lista de jurnale"

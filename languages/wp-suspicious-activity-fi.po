@@ -1,0 +1,403 @@
+# Translation of WP Suspicious Activity Detector.
+# This file is distributed under the same license as the WP Suspicious Activity Detector plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Suspicious Activity Detector 5.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-18T04:14:19+00:00\n"
+"PO-Revision-Date: 2026-09-18T04:14:19+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: manual-build\n"
+
+msgid "1 пристрій"
+msgstr "1 laite"
+
+msgid "2 пристрої"
+msgstr "2 laitetta"
+
+msgid "3+ пристрої"
+msgstr "3+ laitetta"
+
+msgid "API"
+msgstr "API"
+
+msgid "Email користувача:"
+msgstr "Käyttäjän sähköposti:"
+
+msgid "Heartbeat"
+msgstr "Heartbeat"
+
+msgid "Heartbeat-запити забезпечують точний підрахунок часу, поки вкладка відкрита."
+msgstr "Heartbeat-pyynnöt varmistavat tarkan ajanlaskennan niin kauan kuin välilehti on auki."
+
+msgid "ID запису"
+msgstr "Tietueen tunnus"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP-адреса"
+msgstr "IP-osoite"
+
+msgid "Session ID"
+msgstr "Istuntotunnus"
+
+msgid "User-Agent"
+msgstr "User-Agent"
+
+msgid "Інтервал (сек)"
+msgstr "Väli (s)"
+
+msgid "Адмінка"
+msgstr "Hallintapaneeli"
+
+msgid "Адміністратори"
+msgstr "Ylläpitäjät"
+
+msgid "Активність"
+msgstr "Toiminta"
+
+msgid "Аудиторія"
+msgstr "Kohderyhmä"
+
+msgid "Без паралельної активності"
+msgstr "Ei rinnakkaista toimintaa"
+
+msgid "Високий"
+msgstr "Korkea"
+
+msgid "Вперед ›"
+msgstr "Seuraava ›"
+
+msgid "Всього записів:"
+msgstr "Tietueita yhteensä:"
+
+msgid "Всі користувачі"
+msgstr "Kaikki käyttäjät"
+
+msgid "Всі сторінки, API та адмінка (максимальна видимість)"
+msgstr "Kaikki sivut, API ja hallintapaneeli (suurin näkyvyys)"
+
+msgid "Всі типи"
+msgstr "Kaikki tyypit"
+
+msgid "Гість"
+msgstr "Vieras"
+
+msgid "Дата від:"
+msgstr "Päivämäärä alkaen:"
+
+msgid "Дата до:"
+msgstr "Päivämäärä asti:"
+
+msgid "Дата й час"
+msgstr "Päivämäärä ja aika"
+
+msgid "Детектор підозрілої активності"
+msgstr "Epäilyttävän toiminnan tunnistin"
+
+msgid "Діагностика:"
+msgstr "Diagnostiikka:"
+
+msgid "Діапазон (хв)"
+msgstr "Aikaväli (min)"
+
+msgid "Діапазон = сума всіх активних проміжків (реальний час на сайті)."
+msgstr "Aikaväli = kaikkien aktiivisten jaksojen summa (todellinen sivustolla vietetty aika)."
+
+msgid "Діапазон логування"
+msgstr "Lokituksen laajuus"
+
+msgid "Дії"
+msgstr "Toiminnot"
+
+msgid "З"
+msgstr "Alkaen"
+
+msgid "За вказаними критеріями даних не знайдено."
+msgstr "Annetuilla ehdoilla ei löytynyt tietoja."
+
+msgid "За вказаними критеріями записів не знайдено."
+msgstr "Annetuilla ehdoilla ei löytynyt tietueita."
+
+msgid "За період:"
+msgstr "Ajanjaksolle:"
+
+msgid "Завжди"
+msgstr "Aina"
+
+msgid "Запис не знайдено."
+msgstr "Tietuetta ei löytynyt."
+
+msgid "Запити"
+msgstr "Pyynnöt"
+
+msgid "Запити сортуються по часу. Якщо розрив між сусідніми запитами ≤ 5 хв — це одна сесія, час додається."
+msgstr "Pyynnöt lajitellaan ajan mukaan. Jos peräkkäisten pyyntöjen väli on ≤ 5 min, kyseessä on yksi istunto ja aika lasketaan yhteen."
+
+msgid "Зареєстровані"
+msgstr "Rekisteröityneet"
+
+msgid "Застосувати фільтри"
+msgstr "Käytä suodattimia"
+
+msgid "Зберегти налаштування"
+msgstr "Tallenna asetukset"
+
+msgid "Збільшити"
+msgstr "Lähennä"
+
+msgid "Зменшити"
+msgstr "Loitonna"
+
+msgid "Знайдено записів:"
+msgstr "Tietueita löytyi:"
+
+msgid "Знайдено користувачів:"
+msgstr "Käyttäjiä löytyi:"
+
+msgid "Коли логувати"
+msgstr "Milloin lokitetaan"
+
+msgid "Користувач"
+msgstr "Käyttäjä"
+
+msgid "Користувача не вказано."
+msgstr "Käyttäjää ei määritetty."
+
+msgid "Коротке перетинання: %s хв"
+msgstr "Lyhyt päällekkäisyys: %s min"
+
+msgid "Курси"
+msgstr "Kurssit"
+
+msgid "Лог запитів"
+msgstr "Pyyntöloki"
+
+msgid "Логи"
+msgstr "Lokit"
+
+msgid "Логувати для всіх (включно з гостями)"
+msgstr "Lokita kaikille (vieraat mukaan lukien)"
+
+msgid "Логіка підрахунку часу (сесійний метод):"
+msgstr "Ajanlaskennan logiikka (istuntomenetelmä):"
+
+msgid "Мова"
+msgstr "Kieli"
+
+msgid "Мова інтерфейсу плагіна"
+msgstr "Lisäosan käyttöliittymän kieli"
+
+msgid "Мін. унікальних IP:"
+msgstr "Väh. yksilöllisiä IP:itä:"
+
+msgid "Налаштування"
+msgstr "Asetukset"
+
+msgid "Налаштування збережено."
+msgstr "Asetukset tallennettu."
+
+msgid "Налаштування підозрілої активності"
+msgstr "Epäilyttävän toiminnan asetukset"
+
+msgid "Неактивний"
+msgstr "Ei aktiivinen"
+
+msgid "Недостатньо даних"
+msgstr "Riittämättömät tiedot"
+
+msgid "Недостатньо прав"
+msgstr "Riittämättömät oikeudet"
+
+msgid "Немає даних для побудови таймлайну за обраний період."
+msgstr "Ei tietoja aikajanan muodostamiseksi valitulle ajanjaksolle."
+
+msgid "Низький"
+msgstr "Matala"
+
+msgid "Паралельна робота пристроїв: %s хв"
+msgstr "Rinnakkainen laitteiden käyttö: %s min"
+
+msgid "Паралельний час = Сумарно − Діапазон. Якщо > 0, пристрої працювали одночасно."
+msgstr "Rinnakkainen aika = Yhteensä − Aikaväli. Jos > 0, laitteet olivat aktiivisia samanaikaisesti."
+
+msgid "Паралельно (хв)"
+msgstr "Rinnakkain (min)"
+
+msgid "Параметри"
+msgstr "Parametrit"
+
+msgid "Перевірте діагностику вище."
+msgstr "Tarkista yllä oleva diagnostiikka."
+
+msgid "Перегляд"
+msgstr "Näytä"
+
+msgid "Перегляд активності"
+msgstr "Toimintanäkymä"
+
+msgid "Перегляд логу"
+msgstr "Lokinäkymä"
+
+msgid "Переглянути"
+msgstr "Näytä"
+
+msgid "Перестати логувати"
+msgstr "Lopeta lokitus"
+
+msgid "Період"
+msgstr "Ajanjakso"
+
+msgid "Показати всі логи цього користувача"
+msgstr "Näytä kaikki tämän käyttäjän lokit"
+
+msgid "Показати ▼"
+msgstr "Näytä ▼"
+
+msgid "Помилка SQL:"
+msgstr "SQL-virhe:"
+
+msgid "Пристрої"
+msgstr "Laitteet"
+
+msgid "Пристрої працювали одночасно"
+msgstr "Laitteet olivat aktiivisia samanaikaisesti"
+
+msgid "Пристрій"
+msgstr "Laite"
+
+msgid "Пристрій (User-Agent містить):"
+msgstr "Laite (User-Agent sisältää):"
+
+msgid "Проміжок часу"
+msgstr "Aikaikkuna"
+
+msgid "Підозріла активність"
+msgstr "Epäilyttävä toiminta"
+
+msgid "Результатів запиту:"
+msgstr "Kyselyn tulokset:"
+
+msgid "Ризик"
+msgstr "Riski"
+
+msgid "Розрив (користувач вийшов)"
+msgstr "Katko (käyttäjä poistui)"
+
+msgid "Розрив: %s"
+msgstr "Katko: %s"
+
+msgid "Розривів > 5 хв"
+msgstr "Katkoja > 5 min"
+
+msgid "Середній"
+msgstr "Keskitaso"
+
+msgid "Сесій"
+msgstr "Istuntoja"
+
+msgid "Сесій: %d | Розривів > 5 хв: %d"
+msgstr "Istuntoja: %d | Katkoja > 5 min: %d"
+
+msgid "Скинути"
+msgstr "Nollaa"
+
+msgid "До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін."
+msgstr "Luettelo sisältää sivustolle asennetut WordPress-kielipaketit sekä tähän lisäosaan sisäänrakennetut käännökset."
+
+msgid "Стан"
+msgstr "Tila"
+
+msgid "Сторінка"
+msgstr "Sivu"
+
+msgid "Сумарно (хв)"
+msgstr "Yhteensä (min)"
+
+msgid "Сумарно по пристроях (хв)"
+msgstr "Yhteensä laitteittain (min)"
+
+msgid "Сумарно по пристроях = сума активного часу кожного пристрою окремо."
+msgstr "Yhteensä laitteittain = kunkin laitteen aktiivisen ajan summa erikseen."
+
+msgid "Сусідні запити цього користувача (±15 хв)"
+msgstr "Tämän käyttäjän lähipyynnöt (±15 min)"
+
+msgid "Таблиця:"
+msgstr "Taulu:"
+
+msgid "Тип"
+msgstr "Tyyppi"
+
+msgid "Тип запиту"
+msgstr "Pyynnön tyyppi"
+
+msgid "Тип запиту:"
+msgstr "Pyynnön tyyppi:"
+
+msgid "Тип користувача:"
+msgstr "Käyttäjätyyppi:"
+
+msgid "Тільки адмінка та heartbeat"
+msgstr "Vain hallintapaneeli ja heartbeat"
+
+msgid "Тільки для адміністраторів"
+msgstr "Vain ylläpitäjille"
+
+msgid "Тільки для зареєстрованих користувачів"
+msgstr "Vain rekisteröityneille käyttäjille"
+
+msgid "Тільки сайт без адмінки та heartbeat"
+msgstr "Vain sivusto ilman hallintapaneelia, ja heartbeat"
+
+msgid "Тільки сторінки та heartbeat"
+msgstr "Vain sivut ja heartbeat"
+
+msgid "Увімкнути heartbeat (пінг, поки вкладка відкрита)"
+msgstr "Ota heartbeat käyttöön (ping niin kauan kuin välilehti on auki)"
+
+msgid "Унікальних user_id:"
+msgstr "Yksilöllisiä user_id:itä:"
+
+msgid "Хто підпадає під логування"
+msgstr "Ketkä lokitetaan"
+
+msgid "Час"
+msgstr "Aika"
+
+msgid "Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується."
+msgstr "Sivuston vuorokaudenaika. Puoliyön ylittävä aikaikkuna (esim. 22:00–06:00) on tuettu."
+
+msgid "Часова шкала"
+msgstr "Aikajana"
+
+msgid "Шлях"
+msgstr "Polku"
+
+msgid "Що логувати"
+msgstr "Mitä lokitetaan"
+
+msgid "Якщо розрив > 5 хв — користувач вийшов, розрив НЕ рахується."
+msgstr "Jos katko on > 5 min, käyttäjä on poistunut, eikä katkoa lasketa."
+
+msgid "по"
+msgstr "asti"
+
+msgid "— мова сайту за замовчуванням —"
+msgstr "— sivuston oletuskieli —"
+
+msgid "‹ Назад"
+msgstr "‹ Takaisin"
+
+msgid "← До списку активності"
+msgstr "← Takaisin toimintaluetteloon"
+
+msgid "← До списку логів"
+msgstr "← Takaisin lokiluetteloon"
