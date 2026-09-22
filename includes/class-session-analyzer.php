@@ -222,7 +222,7 @@ class WP_SAD_Session_Analyzer {
                         'width_percent' => min($width_percent, 100),
                         'device_count'  => 0,
                         'time_range'    => gmdate('Y-m-d H:i', $prev_time) . ' - ' . gmdate('H:i', $event['time'] - 1),
-                        'agent_list'    => __('Неактивний', 'suspicious-activity'),
+                        'agent_list'    => __('Неактивний', 'sharing-activity-detector'),
                         'is_gap'        => true,
                     ];
                     $general_gaps++;
@@ -262,7 +262,7 @@ class WP_SAD_Session_Analyzer {
                     'width_percent' => min($width_percent, 100),
                     'device_count'  => 0,
                     'time_range'    => gmdate('Y-m-d H:i', $prev_time) . ' - ' . gmdate('Y-m-d H:i', $range_end),
-                    'agent_list'    => __('Неактивний', 'suspicious-activity'),
+                    'agent_list'    => __('Неактивний', 'sharing-activity-detector'),
                     'is_gap'        => true,
                 ];
                 $general_gaps++;
@@ -286,28 +286,28 @@ class WP_SAD_Session_Analyzer {
         if ($parallel_time >= 60) {
             return [
                 'class'  => 'high',
-                'label'  => __('Високий', 'suspicious-activity'),
+                'label'  => __('Високий', 'sharing-activity-detector'),
                 // translators: %s: number of minutes of parallel device activity.
-                'reason' => sprintf(__('Паралельна робота пристроїв: %s хв', 'suspicious-activity'), $parallel_time),
+                'reason' => sprintf(__('Паралельна робота пристроїв: %s хв', 'sharing-activity-detector'), $parallel_time),
             ];
         }
 
         if ($parallel_time >= 15) {
             return [
                 'class'  => 'medium',
-                'label'  => __('Середній', 'suspicious-activity'),
+                'label'  => __('Середній', 'sharing-activity-detector'),
                 // translators: %s: number of minutes of parallel device activity.
-                'reason' => sprintf(__('Паралельна робота пристроїв: %s хв', 'suspicious-activity'), $parallel_time),
+                'reason' => sprintf(__('Паралельна робота пристроїв: %s хв', 'sharing-activity-detector'), $parallel_time),
             ];
         }
 
         return [
             'class'  => 'low',
-            'label'  => __('Низький', 'suspicious-activity'),
+            'label'  => __('Низький', 'sharing-activity-detector'),
             'reason' => $parallel_time > 0
                 // translators: %s: number of minutes of short parallel-device overlap.
-                ? sprintf(__('Коротке перетинання: %s хв', 'suspicious-activity'), $parallel_time)
-                : __('Без паралельної активності', 'suspicious-activity'),
+                ? sprintf(__('Коротке перетинання: %s хв', 'sharing-activity-detector'), $parallel_time)
+                : __('Без паралельної активності', 'sharing-activity-detector'),
         ];
     }
 

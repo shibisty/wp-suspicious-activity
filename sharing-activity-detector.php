@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Suspicious Activity Detector
+ * Plugin Name: Sharing Activity Detector by Shibisty
  * Description: Detection of suspicious activity with an interactive timeline, request log, and heartbeat.
  * Version: 5.0.0
  * Author: Alexander Shibisty
- * Text Domain: suspicious-activity
+ * Text Domain: sharing-activity-detector
  * Domain Path: /languages
  * License: MIT
  * License URI: https://opensource.org/licenses/MIT

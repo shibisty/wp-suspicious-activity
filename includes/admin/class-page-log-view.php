@@ -10,7 +10,7 @@ class WP_SAD_Page_Log_View {
 
     public function render() {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('Недостатньо прав', 'suspicious-activity'));
+            wp_die(esc_html__('Недостатньо прав', 'sharing-activity-detector'));
         }
 
         global $wpdb;

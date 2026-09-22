@@ -1,4 +1,4 @@
-# Suspicious Activity Detector
+# Sharing Activity Detector by Shibisty
 
 **Contributors:** alexandershibisty
 **Tags:** security, audit log, session tracking, activity monitor, multi-device
@@ -13,11 +13,11 @@ Tracks user sessions/requests, flags suspicious multi-device activity, and gives
 
 ## Description
 
-Suspicious Activity Detector logs requests (page views, REST/AJAX calls, admin-area hits, and optional heartbeat pings) into a dedicated database table, then groups them into sessions per user/device. From that it computes, for each user:
+Sharing Activity Detector by Shibisty logs requests (page views, REST/AJAX calls, admin-area hits, and optional heartbeat pings) into a dedicated database table, then groups them into sessions per user/device. From that it computes, for each user:
 
 * **Range** — the sum of all active time intervals (how long the user was actually on the site).
 * **Total per device** — the sum of each device's active time, computed separately.
-* **Parallel time** — `Total − Range`. A value greater than zero means two or more devices were active for the same user at the same time, which is the plugin's suspicious-activity signal (e.g. a shared account being used from two locations at once).
+* **Parallel time** — `Total − Range`. A value greater than zero means two or more devices were active for the same user at the same time, which is the plugin's sharing-activity-detector signal (e.g. a shared account being used from two locations at once).
 
 Session boundaries are computed with a simple gap rule: if two consecutive requests from the same user/device are ≤ 5 minutes apart, they belong to the same session and the time between them is counted; a gap of more than 5 minutes is treated as the user having left, and that gap is *not* counted toward active time.
 
@@ -25,7 +25,7 @@ Session boundaries are computed with a simple gap rule: if two consecutive reque
 
 All screens live under **Suspicious Activity** in the admin menu (`manage_options` capability required):
 
-* **Activity** (`suspicious-activity`) — list of users with a suspicious-activity timeline, sortable/filterable.
+* **Activity** (`sharing-activity-detector`) — list of users with a sharing-activity-detector timeline, sortable/filterable.
 * **Request Logs** (`wp-sad-request-logs`) — full paginated log of every recorded request, with filters and sortable columns.
 * **Settings** (`wp-sad-settings`) — logging rules, heartbeat, and interface language.
 * **Log View** (`wp-sad-log-view`, hidden) — detail view of a single log entry, linked from the Request Logs list.
@@ -45,7 +45,7 @@ Found under **Suspicious Activity → Settings**:
 
 ### Localization
 
-The plugin is fully translatable (`suspicious-activity` text domain, `/languages` directory) and ships complete, hand-written translations for 30 languages out of the box: English, Ukrainian (source language), Russian, German, French, Spanish, Italian, Portuguese (Brazil), Portuguese (Portugal), Polish, Dutch, Romanian, Czech, Hungarian, Bulgarian, Greek, Turkish, Swedish, Finnish, Lithuanian, Croatian, Serbian, Georgian, Azerbaijani, Kazakh, Belarusian, Arabic, Hebrew, Hindi, Chinese (Simplified), and Japanese.
+The plugin is fully translatable (`sharing-activity-detector` text domain, `/languages` directory) and ships complete, hand-written translations for 30 languages out of the box: English, Ukrainian (source language), Russian, German, French, Spanish, Italian, Portuguese (Brazil), Portuguese (Portugal), Polish, Dutch, Romanian, Czech, Hungarian, Bulgarian, Greek, Turkish, Swedish, Finnish, Lithuanian, Croatian, Serbian, Georgian, Azerbaijani, Kazakh, Belarusian, Arabic, Hebrew, Hindi, Chinese (Simplified), and Japanese.
 
 Pick a language on the Settings screen — it takes effect immediately and doesn't require installing a WordPress core language pack for that locale, since the plugin loads its own `.mo` file directly from its `/languages` folder.
 
@@ -54,8 +54,8 @@ Pick a language on the Settings screen — it takes effect immediately and doesn
 The plugin is split into logic and presentation layers rather than one monolithic file:
 
 ```
-suspicious-activity/
-├── suspicious-activity.php     # Bootstrap: constants, requires, activation
+sharing-activity-detector/
+├── sharing-activity-detector.php     # Bootstrap: constants, requires, activation
 ├── includes/
 │   ├── class-plugin.php           # Orchestrator: hooks, textdomain, wiring
 │   ├── class-db.php                # Table name/schema, install + upgrade (dbDelta), checked on every init
@@ -75,8 +75,8 @@ Request records carry a `request_type` (`page`, `api`, `admin`, or `heartbeat`),
 
 ## Installation
 
-1. Copy the `suspicious-activity` folder into `wp-content/plugins/`, or install it as a zip from the Plugins → Add New screen.
-2. Activate **Suspicious Activity Detector** from the WordPress admin Plugins screen.
+1. Copy the `sharing-activity-detector` folder into `wp-content/plugins/`, or install it as a zip from the Plugins → Add New screen.
+2. Activate **Sharing Activity Detector by Shibisty** from the WordPress admin Plugins screen.
 3. The plugin creates its own table (`{$wpdb->prefix}request_logs`) automatically on activation, and also re-checks the table/schema on every `init` — so the table is repaired automatically if it's ever missing, without needing to reactivate the plugin.
 4. Visit **Suspicious Activity → Settings** to choose who gets logged, what gets logged, and whether heartbeat is enabled.
 
@@ -88,7 +88,7 @@ No. The plugin does not delete its data on deactivation, and uninstalling/deleti
 
 ### Can I add a language that isn't bundled?
 
-Yes. Drop a `suspicious-activity-{locale}.mo` (and, ideally, `.po`) file into `/languages`, using `suspicious-activity.pot` as the reference for all translatable strings, and add the locale to `WP_SAD_Settings::BUNDLED_LANGUAGES` in `includes/class-settings.php` so it appears in the Settings dropdown.
+Yes. Drop a `sharing-activity-detector-{locale}.mo` (and, ideally, `.po`) file into `/languages`, using `sharing-activity-detector.pot` as the reference for all translatable strings, and add the locale to `WP_SAD_Settings::BUNDLED_LANGUAGES` in `includes/class-settings.php` so it appears in the Settings dropdown.
 
 ### Can heartbeat data be added retroactively for past traffic?
 

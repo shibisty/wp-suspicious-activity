@@ -18,7 +18,7 @@ class WP_SAD_Page_Activity {
 
     public function render() {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('Недостатньо прав', 'suspicious-activity'));
+            wp_die(esc_html__('Недостатньо прав', 'sharing-activity-detector'));
         }
 
         $filters = $this->get_filters();

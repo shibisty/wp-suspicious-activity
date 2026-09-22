@@ -8,88 +8,88 @@ if (!defined('ABSPATH')) {
 /** @var string $nonce_action_view */
 ?>
 <div class="wrap wp-sad-wrapper">
-    <h1 class="wp-heading-inline"><?php esc_html_e('Налаштування підозрілої активності', 'suspicious-activity'); ?></h1>
+    <h1 class="wp-heading-inline"><?php esc_html_e('Налаштування підозрілої активності', 'sharing-activity-detector'); ?></h1>
 
     <?php if ($saved_view): ?>
-        <div class="notice notice-success" style="margin-top:15px;"><p><?php esc_html_e('Налаштування збережено.', 'suspicious-activity'); ?></p></div>
+        <div class="notice notice-success" style="margin-top:15px;"><p><?php esc_html_e('Налаштування збережено.', 'sharing-activity-detector'); ?></p></div>
     <?php endif; ?>
 
     <form method="post" style="max-width:720px; margin-top:20px;">
         <?php wp_nonce_field($nonce_action_view, 'wp_sad_settings_nonce'); ?>
 
-        <h2><?php esc_html_e('Хто підпадає під логування', 'suspicious-activity'); ?></h2>
+        <h2><?php esc_html_e('Хто підпадає під логування', 'sharing-activity-detector'); ?></h2>
         <table class="form-table">
             <tr>
-                <th><?php esc_html_e('Аудиторія', 'suspicious-activity'); ?></th>
+                <th><?php esc_html_e('Аудиторія', 'sharing-activity-detector'); ?></th>
                 <td>
-                    <label><input type="radio" name="log_audience" value="all" <?php checked($settings_view['log_audience'], 'all'); ?>> <?php esc_html_e('Логувати для всіх (включно з гостями)', 'suspicious-activity'); ?></label><br>
-                    <label><input type="radio" name="log_audience" value="registered" <?php checked($settings_view['log_audience'], 'registered'); ?>> <?php esc_html_e('Тільки для зареєстрованих користувачів', 'suspicious-activity'); ?></label><br>
-                    <label><input type="radio" name="log_audience" value="admins" <?php checked($settings_view['log_audience'], 'admins'); ?>> <?php esc_html_e('Тільки для адміністраторів', 'suspicious-activity'); ?></label>
+                    <label><input type="radio" name="log_audience" value="all" <?php checked($settings_view['log_audience'], 'all'); ?>> <?php esc_html_e('Логувати для всіх (включно з гостями)', 'sharing-activity-detector'); ?></label><br>
+                    <label><input type="radio" name="log_audience" value="registered" <?php checked($settings_view['log_audience'], 'registered'); ?>> <?php esc_html_e('Тільки для зареєстрованих користувачів', 'sharing-activity-detector'); ?></label><br>
+                    <label><input type="radio" name="log_audience" value="admins" <?php checked($settings_view['log_audience'], 'admins'); ?>> <?php esc_html_e('Тільки для адміністраторів', 'sharing-activity-detector'); ?></label>
                 </td>
             </tr>
         </table>
 
-        <h2><?php esc_html_e('Що логувати', 'suspicious-activity'); ?></h2>
+        <h2><?php esc_html_e('Що логувати', 'sharing-activity-detector'); ?></h2>
         <table class="form-table">
             <tr>
-                <th><?php esc_html_e('Діапазон логування', 'suspicious-activity'); ?></th>
+                <th><?php esc_html_e('Діапазон логування', 'sharing-activity-detector'); ?></th>
                 <td>
-                    <label><input type="radio" name="log_scope" value="all" <?php checked($settings_view['log_scope'], 'all'); ?>> <?php esc_html_e('Всі сторінки, API та адмінка (максимальна видимість)', 'suspicious-activity'); ?></label><br>
-                    <label><input type="radio" name="log_scope" value="pages_heartbeat" <?php checked($settings_view['log_scope'], 'pages_heartbeat'); ?>> <?php esc_html_e('Тільки сторінки та heartbeat', 'suspicious-activity'); ?></label><br>
-                    <label><input type="radio" name="log_scope" value="site_no_admin_heartbeat" <?php checked($settings_view['log_scope'], 'site_no_admin_heartbeat'); ?>> <?php esc_html_e('Тільки сайт без адмінки та heartbeat', 'suspicious-activity'); ?></label><br>
-                    <label><input type="radio" name="log_scope" value="admin_heartbeat" <?php checked($settings_view['log_scope'], 'admin_heartbeat'); ?>> <?php esc_html_e('Тільки адмінка та heartbeat', 'suspicious-activity'); ?></label><br>
-                    <label><input type="radio" name="log_scope" value="off" <?php checked($settings_view['log_scope'], 'off'); ?>> <?php esc_html_e('Перестати логувати', 'suspicious-activity'); ?></label>
+                    <label><input type="radio" name="log_scope" value="all" <?php checked($settings_view['log_scope'], 'all'); ?>> <?php esc_html_e('Всі сторінки, API та адмінка (максимальна видимість)', 'sharing-activity-detector'); ?></label><br>
+                    <label><input type="radio" name="log_scope" value="pages_heartbeat" <?php checked($settings_view['log_scope'], 'pages_heartbeat'); ?>> <?php esc_html_e('Тільки сторінки та heartbeat', 'sharing-activity-detector'); ?></label><br>
+                    <label><input type="radio" name="log_scope" value="site_no_admin_heartbeat" <?php checked($settings_view['log_scope'], 'site_no_admin_heartbeat'); ?>> <?php esc_html_e('Тільки сайт без адмінки та heartbeat', 'sharing-activity-detector'); ?></label><br>
+                    <label><input type="radio" name="log_scope" value="admin_heartbeat" <?php checked($settings_view['log_scope'], 'admin_heartbeat'); ?>> <?php esc_html_e('Тільки адмінка та heartbeat', 'sharing-activity-detector'); ?></label><br>
+                    <label><input type="radio" name="log_scope" value="off" <?php checked($settings_view['log_scope'], 'off'); ?>> <?php esc_html_e('Перестати логувати', 'sharing-activity-detector'); ?></label>
                 </td>
             </tr>
         </table>
 
-        <h2><?php esc_html_e('Коли логувати', 'suspicious-activity'); ?></h2>
+        <h2><?php esc_html_e('Коли логувати', 'sharing-activity-detector'); ?></h2>
         <table class="form-table">
             <tr>
-                <th><?php esc_html_e('Проміжок часу', 'suspicious-activity'); ?></th>
+                <th><?php esc_html_e('Проміжок часу', 'sharing-activity-detector'); ?></th>
                 <td>
-                    <label><input type="radio" name="log_window_mode" value="always" <?php checked($settings_view['log_window_mode'], 'always'); ?>> <?php esc_html_e('Завжди', 'suspicious-activity'); ?></label><br>
+                    <label><input type="radio" name="log_window_mode" value="always" <?php checked($settings_view['log_window_mode'], 'always'); ?>> <?php esc_html_e('Завжди', 'sharing-activity-detector'); ?></label><br>
                     <label>
                         <input type="radio" name="log_window_mode" value="scheduled" <?php checked($settings_view['log_window_mode'], 'scheduled'); ?>>
-                        <?php esc_html_e('З', 'suspicious-activity'); ?>
+                        <?php esc_html_e('З', 'sharing-activity-detector'); ?>
                         <input type="time" name="log_window_from" value="<?php echo esc_attr($settings_view['log_window_from']); ?>">
-                        <?php esc_html_e('по', 'suspicious-activity'); ?>
+                        <?php esc_html_e('по', 'sharing-activity-detector'); ?>
                         <input type="time" name="log_window_to" value="<?php echo esc_attr($settings_view['log_window_to']); ?>">
                     </label>
-                    <p class="description"><?php esc_html_e('Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується.', 'suspicious-activity'); ?></p>
+                    <p class="description"><?php esc_html_e('Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується.', 'sharing-activity-detector'); ?></p>
                 </td>
             </tr>
         </table>
 
-        <h2><?php esc_html_e('Heartbeat', 'suspicious-activity'); ?></h2>
+        <h2><?php esc_html_e('Heartbeat', 'sharing-activity-detector'); ?></h2>
         <table class="form-table">
             <tr>
-                <th><?php esc_html_e('Стан', 'suspicious-activity'); ?></th>
+                <th><?php esc_html_e('Стан', 'sharing-activity-detector'); ?></th>
                 <td>
-                    <label><input type="checkbox" name="heartbeat_enabled" value="1" <?php checked(!empty($settings_view['heartbeat_enabled'])); ?>> <?php esc_html_e('Увімкнути heartbeat (пінг, поки вкладка відкрита)', 'suspicious-activity'); ?></label>
+                    <label><input type="checkbox" name="heartbeat_enabled" value="1" <?php checked(!empty($settings_view['heartbeat_enabled'])); ?>> <?php esc_html_e('Увімкнути heartbeat (пінг, поки вкладка відкрита)', 'sharing-activity-detector'); ?></label>
                 </td>
             </tr>
             <tr>
-                <th><?php esc_html_e('Інтервал (сек)', 'suspicious-activity'); ?></th>
+                <th><?php esc_html_e('Інтервал (сек)', 'sharing-activity-detector'); ?></th>
                 <td><input type="number" name="heartbeat_interval" min="15" max="600" value="<?php echo esc_attr($settings_view['heartbeat_interval']); ?>"></td>
             </tr>
         </table>
 
-        <h2><?php esc_html_e('Мова інтерфейсу плагіна', 'suspicious-activity'); ?></h2>
+        <h2><?php esc_html_e('Мова інтерфейсу плагіна', 'sharing-activity-detector'); ?></h2>
         <table class="form-table">
             <tr>
-                <th><?php esc_html_e('Мова', 'suspicious-activity'); ?></th>
+                <th><?php esc_html_e('Мова', 'sharing-activity-detector'); ?></th>
                 <td>
                     <select name="admin_language">
                         <?php foreach ($languages_view as $code => $label): ?>
                             <option value="<?php echo esc_attr($code); ?>" <?php selected($settings_view['admin_language'], $code); ?>><?php echo esc_html($label); ?></option>
                         <?php endforeach; ?>
                     </select>
-                    <p class="description"><?php esc_html_e('До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін.', 'suspicious-activity'); ?></p>
+                    <p class="description"><?php esc_html_e('До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін.', 'sharing-activity-detector'); ?></p>
                 </td>
             </tr>
         </table>
 
-        <?php submit_button(__('Зберегти налаштування', 'suspicious-activity')); ?>
+        <?php submit_button(__('Зберегти налаштування', 'sharing-activity-detector')); ?>
     </form>
 </div>

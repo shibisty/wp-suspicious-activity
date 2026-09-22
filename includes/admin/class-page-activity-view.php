@@ -17,7 +17,7 @@ class WP_SAD_Page_Activity_View {
 
     public function render() {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('Недостатньо прав', 'suspicious-activity'));
+            wp_die(esc_html__('Недостатньо прав', 'sharing-activity-detector'));
         }
 
         // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter params (user_id, date range) on a GET-based view screen, not a state-changing action.

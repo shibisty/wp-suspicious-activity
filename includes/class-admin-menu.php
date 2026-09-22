@@ -26,8 +26,8 @@ class WP_SAD_Admin_Menu {
 
     public function register() {
         add_menu_page(
-            __('Підозріла активність', 'suspicious-activity'),
-            __('Підозріла активність', 'suspicious-activity'),
+            __('Підозріла активність', 'sharing-activity-detector'),
+            __('Підозріла активність', 'sharing-activity-detector'),
             self::CAP,
             self::SLUG_ACTIVITY,
             [$this, 'render_activity'],
@@ -37,8 +37,8 @@ class WP_SAD_Admin_Menu {
 
         add_submenu_page(
             self::SLUG_ACTIVITY,
-            __('Активність', 'suspicious-activity'),
-            __('Активність', 'suspicious-activity'),
+            __('Активність', 'sharing-activity-detector'),
+            __('Активність', 'sharing-activity-detector'),
             self::CAP,
             self::SLUG_ACTIVITY,
             [$this, 'render_activity']
@@ -46,8 +46,8 @@ class WP_SAD_Admin_Menu {
 
         add_submenu_page(
             self::SLUG_ACTIVITY,
-            __('Лог запитів', 'suspicious-activity'),
-            __('Лог запитів', 'suspicious-activity'),
+            __('Лог запитів', 'sharing-activity-detector'),
+            __('Лог запитів', 'sharing-activity-detector'),
             self::CAP,
             self::SLUG_REQUEST_LOGS,
             [$this, 'render_request_logs']
@@ -55,15 +55,15 @@ class WP_SAD_Admin_Menu {
 
         add_submenu_page(
             self::SLUG_ACTIVITY,
-            __('Налаштування', 'suspicious-activity'),
-            __('Налаштування', 'suspicious-activity'),
+            __('Налаштування', 'sharing-activity-detector'),
+            __('Налаштування', 'sharing-activity-detector'),
             self::CAP,
             self::SLUG_SETTINGS,
             [$this, 'render_settings']
         );
 
-        add_submenu_page(null, __('Перегляд логу', 'suspicious-activity'), '', self::CAP, self::SLUG_LOG_VIEW, [$this, 'render_log_view']);
-        add_submenu_page(null, __('Перегляд активності', 'suspicious-activity'), '', self::CAP, self::SLUG_ACTIVITY_VIEW, [$this, 'render_activity_view']);
+        add_submenu_page(null, __('Перегляд логу', 'sharing-activity-detector'), '', self::CAP, self::SLUG_LOG_VIEW, [$this, 'render_log_view']);
+        add_submenu_page(null, __('Перегляд активності', 'sharing-activity-detector'), '', self::CAP, self::SLUG_ACTIVITY_VIEW, [$this, 'render_activity_view']);
     }
 
     public function enqueue_assets($hook) {

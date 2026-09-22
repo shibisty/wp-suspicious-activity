@@ -26,7 +26,7 @@ class WP_SAD_Settings {
      * Мови, для яких плагін постачає ВЛАСНІ .po/.mo у своїй папці
      * /languages (незалежно від того, чи встановлений відповідний
      * мовний пакет самого WordPress). Ключ — WP-локаль (файл
-     * suspicious-activity-{locale}.mo), значення — назва мови
+     * sharing-activity-detector-{locale}.mo), значення — назва мови
      * рідним написанням для випадаючого списку.
      */
     const BUNDLED_LANGUAGES = [
@@ -177,7 +177,7 @@ class WP_SAD_Settings {
      */
     public static function available_languages_for_select() {
         $installed = get_available_languages();
-        $choices = ['' => __('— мова сайту за замовчуванням —', 'suspicious-activity')];
+        $choices = ['' => __('— мова сайту за замовчуванням —', 'sharing-activity-detector')];
 
         if (!function_exists('wp_get_available_translations')) {
             require_once ABSPATH . 'wp-admin/includes/translation-install.php';

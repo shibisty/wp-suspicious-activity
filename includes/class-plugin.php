@@ -42,7 +42,7 @@ class WP_SAD_Plugin {
     public function load_textdomain() {
         // phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- required (not merely a WP.org-auto-loaded translation): this plugin's Settings page lets an admin force the plugin's OWN interface language independently of the site language via the `plugin_locale` filter below (filter_plugin_locale()), which only takes effect through an explicit load_plugin_textdomain() call.
         load_plugin_textdomain(
-            'suspicious-activity',
+            'sharing-activity-detector',
             false,
             dirname(plugin_basename(WP_SAD_PLUGIN_FILE)) . '/languages'
         );
@@ -53,7 +53,7 @@ class WP_SAD_Plugin {
      * ПЛАГІНА окремо від загальної мови сайту.
      */
     public static function filter_plugin_locale($locale, $domain) {
-        if ($domain !== 'suspicious-activity') {
+        if ($domain !== 'sharing-activity-detector') {
             return $locale;
         }
 
