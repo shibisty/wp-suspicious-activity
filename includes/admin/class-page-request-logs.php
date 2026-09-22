@@ -13,11 +13,12 @@ class WP_SAD_Page_Request_Logs {
 
     public function render() {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('Недостатньо прав', 'wp-suspicious-activity'));
+            wp_die(esc_html__('Недостатньо прав', 'suspicious-activity'));
         }
 
         $filters = $this->get_filters();
         $sort = $this->get_sort_params();
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only pagination param on a GET-based list screen, not a state-changing action.
         $paged = max(1, intval($_GET['paged'] ?? 1));
         $offset = ($paged - 1) * $this->per_page;
 
@@ -37,14 +38,14 @@ class WP_SAD_Page_Request_Logs {
 
     private function get_filters() {
         $default_to = current_time('Y-m-d');
-        $default_from = date('Y-m-d', strtotime('-30 days', strtotime($default_to)));
+        $default_from = gmdate('Y-m-d', strtotime('-30 days', strtotime($default_to)));
 
-        $email        = sanitize_email(wp_unslash($_GET['email'] ?? ($_GET['emails'] ?? '')));
-        $date_from    = sanitize_text_field(wp_unslash($_GET['date_from'] ?? $default_from));
-        $date_to      = sanitize_text_field(wp_unslash($_GET['date_to'] ?? $default_to));
-        $device       = sanitize_text_field(wp_unslash($_GET['device'] ?? ''));
-        $request_type = sanitize_text_field(wp_unslash($_GET['request_type'] ?? ''));
-        $user_type    = sanitize_text_field(wp_unslash($_GET['user_type'] ?? 'all'));
+        $email        = sanitize_email(wp_unslash($_GET['email'] ?? ($_GET['emails'] ?? ''))); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $date_from    = sanitize_text_field(wp_unslash($_GET['date_from'] ?? $default_from)); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $date_to      = sanitize_text_field(wp_unslash($_GET['date_to'] ?? $default_to)); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $device       = sanitize_text_field(wp_unslash($_GET['device'] ?? '')); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $request_type = sanitize_text_field(wp_unslash($_GET['request_type'] ?? '')); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $user_type    = sanitize_text_field(wp_unslash($_GET['user_type'] ?? 'all')); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
 
         if (!in_array($user_type, ['all', 'registered', 'admins'], true)) {
             $user_type = 'all';
@@ -66,8 +67,8 @@ class WP_SAD_Page_Request_Logs {
     }
 
     private function get_sort_params() {
-        $orderby = sanitize_text_field(wp_unslash($_GET['orderby'] ?? 'created_at'));
-        $order = strtoupper(sanitize_text_field(wp_unslash($_GET['order'] ?? 'DESC')));
+        $orderby = sanitize_text_field(wp_unslash($_GET['orderby'] ?? 'created_at')); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only sort param on a GET-based list screen, not a state-changing action.
+        $order = strtoupper(sanitize_text_field(wp_unslash($_GET['order'] ?? 'DESC'))); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only sort param on a GET-based list screen, not a state-changing action.
 
         $allowed = ['created_at', 'ip', 'request_type', 'user_email'];
         if (!in_array($orderby, $allowed, true)) {
@@ -131,7 +132,7 @@ class WP_SAD_Page_Request_Logs {
 
         $params = array_merge($parts['params'], [$per_page, $offset]);
 
-        return $wpdb->get_results($wpdb->prepare($sql, $params));
+        return $wpdb->get_results($wpdb->prepare($sql, $params)); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- {$table}/{$wpdb->users} are hardcoded/prefix-derived; {$parts['join_sql']}/{$parts['where_sql']} come from build_where(), built only from hardcoded fragments and allow-listed values; {$order_sql} uses $sort['orderby']/$sort['order'] validated against a fixed allow-list; every real user-supplied value is bound via prepare() placeholders.
     }
 
     private function get_total($filters) {
@@ -146,6 +147,6 @@ class WP_SAD_Page_Request_Logs {
                 {$parts['join_sql']}
                 WHERE {$parts['where_sql']}";
 
-        return intval($wpdb->get_var($wpdb->prepare($sql, $parts['params'])));
+        return intval($wpdb->get_var($wpdb->prepare($sql, $parts['params']))); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- {$table}/{$wpdb->users} are hardcoded/prefix-derived; {$parts['join_sql']}/{$parts['where_sql']} come from build_where(), built only from hardcoded fragments and allow-listed values; every real user-supplied value is bound via prepare() placeholders.
     }
 }

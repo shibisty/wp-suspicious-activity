@@ -1,0 +1,403 @@
+# Translation of WP Suspicious Activity Detector.
+# This file is distributed under the same license as the WP Suspicious Activity Detector plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Suspicious Activity Detector 5.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22T12:00:24+00:00\n"
+"PO-Revision-Date: 2026-09-22T12:00:24+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: manual-build\n"
+
+msgid "1 пристрій"
+msgstr "1 eszköz"
+
+msgid "2 пристрої"
+msgstr "2 eszköz"
+
+msgid "3+ пристрої"
+msgstr "3+ eszköz"
+
+msgid "API"
+msgstr "API"
+
+msgid "Email користувача:"
+msgstr "Felhasználó e-mail címe:"
+
+msgid "Heartbeat"
+msgstr "Heartbeat"
+
+msgid "Heartbeat-запити забезпечують точний підрахунок часу, поки вкладка відкрита."
+msgstr "A heartbeat-kérések pontos időszámítást biztosítanak, amíg a lap nyitva van."
+
+msgid "ID запису"
+msgstr "Bejegyzés azonosítója"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP-адреса"
+msgstr "IP-cím"
+
+msgid "Session ID"
+msgstr "Munkamenet-azonosító"
+
+msgid "User-Agent"
+msgstr "User-Agent"
+
+msgid "Інтервал (сек)"
+msgstr "Időköz (mp)"
+
+msgid "Адмінка"
+msgstr "Admin felület"
+
+msgid "Адміністратори"
+msgstr "Adminisztrátorok"
+
+msgid "Активність"
+msgstr "Aktivitás"
+
+msgid "Аудиторія"
+msgstr "Célközönség"
+
+msgid "Без паралельної активності"
+msgstr "Nincs párhuzamos aktivitás"
+
+msgid "Високий"
+msgstr "Magas"
+
+msgid "Вперед ›"
+msgstr "Következő ›"
+
+msgid "Всього записів:"
+msgstr "Bejegyzések összesen:"
+
+msgid "Всі користувачі"
+msgstr "Minden felhasználó"
+
+msgid "Всі сторінки, API та адмінка (максимальна видимість)"
+msgstr "Minden oldal, API és admin felület (maximális láthatóság)"
+
+msgid "Всі типи"
+msgstr "Minden típus"
+
+msgid "Гість"
+msgstr "Vendég"
+
+msgid "Дата від:"
+msgstr "Dátum ettől:"
+
+msgid "Дата до:"
+msgstr "Dátum eddig:"
+
+msgid "Дата й час"
+msgstr "Dátum és idő"
+
+msgid "Детектор підозрілої активності"
+msgstr "Gyanús tevékenység észlelő"
+
+msgid "Діагностика:"
+msgstr "Diagnosztika:"
+
+msgid "Діапазон (хв)"
+msgstr "Tartomány (perc)"
+
+msgid "Діапазон = сума всіх активних проміжків (реальний час на сайті)."
+msgstr "Tartomány = az összes aktív időszak összege (a webhelyen ténylegesen eltöltött idő)."
+
+msgid "Діапазон логування"
+msgstr "Naplózási kör"
+
+msgid "Дії"
+msgstr "Műveletek"
+
+msgid "З"
+msgstr "Ettől"
+
+msgid "За вказаними критеріями даних не знайдено."
+msgstr "A megadott feltételekhez nem található adat."
+
+msgid "За вказаними критеріями записів не знайдено."
+msgstr "A megadott feltételekhez nem található bejegyzés."
+
+msgid "За період:"
+msgstr "Az időszakra:"
+
+msgid "Завжди"
+msgstr "Mindig"
+
+msgid "Запис не знайдено."
+msgstr "A bejegyzés nem található."
+
+msgid "Запити"
+msgstr "Kérések"
+
+msgid "Запити сортуються по часу. Якщо розрив між сусідніми запитами ≤ 5 хв — це одна сесія, час додається."
+msgstr "A kérések idő szerint vannak rendezve. Ha a két szomszédos kérés közötti szünet ≤ 5 perc, az egy munkamenetnek számít, és az idő hozzáadódik."
+
+msgid "Зареєстровані"
+msgstr "Regisztráltak"
+
+msgid "Застосувати фільтри"
+msgstr "Szűrők alkalmazása"
+
+msgid "Зберегти налаштування"
+msgstr "Beállítások mentése"
+
+msgid "Збільшити"
+msgstr "Nagyítás"
+
+msgid "Зменшити"
+msgstr "Kicsinyítés"
+
+msgid "Знайдено записів:"
+msgstr "Talált bejegyzések:"
+
+msgid "Знайдено користувачів:"
+msgstr "Talált felhasználók:"
+
+msgid "Коли логувати"
+msgstr "Mikor naplózzon"
+
+msgid "Користувач"
+msgstr "Felhasználó"
+
+msgid "Користувача не вказано."
+msgstr "Nincs megadva felhasználó."
+
+msgid "Коротке перетинання: %s хв"
+msgstr "Rövid átfedés: %s perc"
+
+msgid "Курси"
+msgstr "Kurzusok"
+
+msgid "Лог запитів"
+msgstr "Kérésnapló"
+
+msgid "Логи"
+msgstr "Naplók"
+
+msgid "Логувати для всіх (включно з гостями)"
+msgstr "Naplózás mindenkinek (vendégekkel együtt)"
+
+msgid "Логіка підрахунку часу (сесійний метод):"
+msgstr "Az időszámítás logikája (munkamenet-módszer):"
+
+msgid "Мова"
+msgstr "Nyelv"
+
+msgid "Мова інтерфейсу плагіна"
+msgstr "A bővítmény felületének nyelve"
+
+msgid "Мін. унікальних IP:"
+msgstr "Min. egyedi IP:"
+
+msgid "Налаштування"
+msgstr "Beállítások"
+
+msgid "Налаштування збережено."
+msgstr "A beállítások mentve."
+
+msgid "Налаштування підозрілої активності"
+msgstr "Gyanús tevékenység beállításai"
+
+msgid "Неактивний"
+msgstr "Inaktív"
+
+msgid "Недостатньо даних"
+msgstr "Nincs elég adat"
+
+msgid "Недостатньо прав"
+msgstr "Nincs elég jogosultság"
+
+msgid "Немає даних для побудови таймлайну за обраний період."
+msgstr "Nincs adat az idővonal elkészítéséhez a kiválasztott időszakra."
+
+msgid "Низький"
+msgstr "Alacsony"
+
+msgid "Паралельна робота пристроїв: %s хв"
+msgstr "Párhuzamos eszközhasználat: %s perc"
+
+msgid "Паралельний час = Сумарно − Діапазон. Якщо > 0, пристрої працювали одночасно."
+msgstr "Párhuzamos idő = Összesen − Tartomány. Ha > 0, az eszközök egyszerre voltak aktívak."
+
+msgid "Паралельно (хв)"
+msgstr "Párhuzamosan (perc)"
+
+msgid "Параметри"
+msgstr "Paraméterek"
+
+msgid "Перевірте діагностику вище."
+msgstr "Ellenőrizze a fenti diagnosztikát."
+
+msgid "Перегляд"
+msgstr "Megtekintés"
+
+msgid "Перегляд активності"
+msgstr "Aktivitás megtekintése"
+
+msgid "Перегляд логу"
+msgstr "Napló megtekintése"
+
+msgid "Переглянути"
+msgstr "Megtekintés"
+
+msgid "Перестати логувати"
+msgstr "Naplózás leállítása"
+
+msgid "Період"
+msgstr "Időszak"
+
+msgid "Показати всі логи цього користувача"
+msgstr "Ezen felhasználó összes naplójának megjelenítése"
+
+msgid "Показати ▼"
+msgstr "Megjelenítés ▼"
+
+msgid "Помилка SQL:"
+msgstr "SQL hiba:"
+
+msgid "Пристрої"
+msgstr "Eszközök"
+
+msgid "Пристрої працювали одночасно"
+msgstr "Az eszközök egyszerre voltak aktívak"
+
+msgid "Пристрій"
+msgstr "Eszköz"
+
+msgid "Пристрій (User-Agent містить):"
+msgstr "Eszköz (a User-Agent tartalmazza):"
+
+msgid "Проміжок часу"
+msgstr "Időablak"
+
+msgid "Підозріла активність"
+msgstr "Gyanús tevékenység"
+
+msgid "Результатів запиту:"
+msgstr "Lekérdezés eredményei:"
+
+msgid "Ризик"
+msgstr "Kockázat"
+
+msgid "Розрив (користувач вийшов)"
+msgstr "Szünet (a felhasználó távozott)"
+
+msgid "Розрив: %s"
+msgstr "Szünet: %s"
+
+msgid "Розривів > 5 хв"
+msgstr "Szünetek > 5 perc"
+
+msgid "Середній"
+msgstr "Közepes"
+
+msgid "Сесій"
+msgstr "Munkamenetek"
+
+msgid "Сесій: %1$d | Розривів > 5 хв: %2$d"
+msgstr "Munkamenetek: %1$d | Szünetek > 5 perc: %2$d"
+
+msgid "Скинути"
+msgstr "Visszaállítás"
+
+msgid "До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін."
+msgstr "A lista tartalmazza a webhelyre telepített WordPress nyelvi csomagokat, valamint a bővítménybe épített fordításokat."
+
+msgid "Стан"
+msgstr "Állapot"
+
+msgid "Сторінка"
+msgstr "Oldal"
+
+msgid "Сумарно (хв)"
+msgstr "Összesen (perc)"
+
+msgid "Сумарно по пристроях (хв)"
+msgstr "Összesen eszközönként (perc)"
+
+msgid "Сумарно по пристроях = сума активного часу кожного пристрою окремо."
+msgstr "Összesen eszközönként = az egyes eszközök aktív idejének összege külön-külön."
+
+msgid "Сусідні запити цього користувача (±15 хв)"
+msgstr "Ezen felhasználó közeli kérései (±15 perc)"
+
+msgid "Таблиця:"
+msgstr "Tábla:"
+
+msgid "Тип"
+msgstr "Típus"
+
+msgid "Тип запиту"
+msgstr "Kérés típusa"
+
+msgid "Тип запиту:"
+msgstr "Kérés típusa:"
+
+msgid "Тип користувача:"
+msgstr "Felhasználó típusa:"
+
+msgid "Тільки адмінка та heartbeat"
+msgstr "Csak admin felület és heartbeat"
+
+msgid "Тільки для адміністраторів"
+msgstr "Csak adminisztrátoroknak"
+
+msgid "Тільки для зареєстрованих користувачів"
+msgstr "Csak regisztrált felhasználóknak"
+
+msgid "Тільки сайт без адмінки та heartbeat"
+msgstr "Csak a webhely, admin felület nélkül, és heartbeat"
+
+msgid "Тільки сторінки та heartbeat"
+msgstr "Csak oldalak és heartbeat"
+
+msgid "Увімкнути heartbeat (пінг, поки вкладка відкрита)"
+msgstr "Heartbeat engedélyezése (ping, amíg a lap nyitva van)"
+
+msgid "Унікальних user_id:"
+msgstr "Egyedi user_id:"
+
+msgid "Хто підпадає під логування"
+msgstr "Kik kerülnek naplózásra"
+
+msgid "Час"
+msgstr "Idő"
+
+msgid "Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується."
+msgstr "A webhely napszaka. Az éjfélt átívelő időablak (pl. 22:00–06:00) is támogatott."
+
+msgid "Часова шкала"
+msgstr "Idővonal"
+
+msgid "Шлях"
+msgstr "Elérési út"
+
+msgid "Що логувати"
+msgstr "Mit naplózzon"
+
+msgid "Якщо розрив > 5 хв — користувач вийшов, розрив НЕ рахується."
+msgstr "Ha a szünet > 5 perc, a felhasználó távozott, és a szünet NEM számít bele."
+
+msgid "по"
+msgstr "eddig"
+
+msgid "— мова сайту за замовчуванням —"
+msgstr "— a webhely alapértelmezett nyelve —"
+
+msgid "‹ Назад"
+msgstr "‹ Vissza"
+
+msgid "← До списку активності"
+msgstr "← Vissza az aktivitáslistához"
+
+msgid "← До списку логів"
+msgstr "← Vissza a naplólistához"

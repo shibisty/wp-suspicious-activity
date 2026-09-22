@@ -21,11 +21,11 @@ class WP_SAD_Request_Logger {
             return;
         }
 
-        if (isset($_SERVER['HTTP_USER_AGENT']) && strpos($_SERVER['HTTP_USER_AGENT'], 'WordPress/') !== false) {
+        if (isset($_SERVER['HTTP_USER_AGENT']) && strpos(sanitize_text_field(wp_unslash($_SERVER['HTTP_USER_AGENT'])), 'WordPress/') !== false) {
             return; // внутрішній WP-to-WP трафік (loopback wp-cron тощо)
         }
 
-        if (isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], 'wp-cron.php') !== false) {
+        if (isset($_SERVER['REQUEST_URI']) && strpos(sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])), 'wp-cron.php') !== false) {
             return;
         }
 
@@ -64,7 +64,7 @@ class WP_SAD_Request_Logger {
      * ЯКЩО це не admin-ajax.php і не наш heartbeat REST-роут.
      */
     private function detect_request_type() {
-        $uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+        $uri = isset($_SERVER['REQUEST_URI']) ? sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])) : '';
 
         if (strpos($uri, '/wp-json/wp-sad/v1/heartbeat') !== false) {
             return 'heartbeat';
@@ -129,15 +129,16 @@ class WP_SAD_Request_Logger {
     private function insert_log($user_id, $request_type) {
         global $wpdb;
 
-        $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? substr($_SERVER['HTTP_USER_AGENT'], 0, 512) : '';
-        $ip         = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
-        $path       = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
-        $params     = wp_json_encode(array_merge($_GET, $_POST));
+        $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? substr(sanitize_text_field(wp_unslash($_SERVER['HTTP_USER_AGENT'])), 0, 512) : '';
+        $ip         = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR'])) : '';
+        $path       = isset($_SERVER['REQUEST_URI']) ? sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])) : '';
+        $params     = wp_json_encode(array_merge($_GET, $_POST)); // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- this is the plugin's own passive audit log: by design it records the raw parameter set of EVERY request (not a privileged form submission), so a nonce check does not apply here; the merged params are stored as an opaque JSON blob for later admin review, never executed or output unescaped (see views/log-single.php, which escapes it on display).
 
         $session_id = $user_id
             ? (function_exists('wp_get_session_token') ? wp_get_session_token() : '')
             : $this->get_or_set_guest_session_id();
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- $wpdb->insert() is the WordPress-recommended API for writing a row; caching does not apply to an INSERT.
         $wpdb->insert(
             WP_SAD_DB::table_name(),
             [
@@ -160,7 +161,7 @@ class WP_SAD_Request_Logger {
      */
     private function get_or_set_guest_session_id() {
         if (!empty($_COOKIE[self::GUEST_COOKIE])) {
-            return sanitize_text_field($_COOKIE[self::GUEST_COOKIE]);
+            return sanitize_text_field(wp_unslash($_COOKIE[self::GUEST_COOKIE]));
         }
 
         if (headers_sent()) {

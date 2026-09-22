@@ -26,6 +26,7 @@ class WP_SAD_Query_Helpers {
 
             case 'admins':
                 $capabilities_key = $wpdb->prefix . 'capabilities';
+                // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- {$wpdb->usermeta} is a WP core table property, not user input; {$user_id_col} is always a hardcoded column expression supplied by the calling code (e.g. 'l.user_id'), never derived from a request; the only real value ($capabilities_key) is bound via a prepare() placeholder.
                 return [
                     'join'  => $wpdb->prepare(
                         "INNER JOIN {$wpdb->usermeta} sad_um ON sad_um.user_id = {$user_id_col} AND sad_um.meta_key = %s",
@@ -33,6 +34,7 @@ class WP_SAD_Query_Helpers {
                     ),
                     'where' => "sad_um.meta_value LIKE '%\"administrator\"%'",
                 ];
+                // phpcs:enable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
             case 'all':
             default:

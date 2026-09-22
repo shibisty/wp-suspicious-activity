@@ -12,7 +12,7 @@ class WP_SAD_View_Helpers {
 
     public static function render_user_link($user_id, $email, $display_name = '') {
         $user_id = intval($user_id);
-        $label = esc_html($email ?: ($user_id ? ('ID: ' . $user_id) : __('Гість', 'wp-suspicious-activity')));
+        $label = esc_html($email ?: ($user_id ? ('ID: ' . $user_id) : __('Гість', 'suspicious-activity')));
 
         if ($user_id > 0) {
             $edit_link = get_edit_user_link($user_id);
@@ -61,7 +61,7 @@ class WP_SAD_View_Helpers {
 
         if ($current > 1) {
             $url = add_query_arg(array_merge($query_args, ['paged' => $current - 1]), $base_url);
-            echo '<a class="prev page-numbers" href="' . esc_url($url) . '">' . esc_html__('‹ Назад', 'wp-suspicious-activity') . '</a>';
+            echo '<a class="prev page-numbers" href="' . esc_url($url) . '">' . esc_html__('‹ Назад', 'suspicious-activity') . '</a>';
         }
 
         for ($i = $start; $i <= $end; $i++) {
@@ -75,7 +75,7 @@ class WP_SAD_View_Helpers {
 
         if ($current < $total) {
             $url = add_query_arg(array_merge($query_args, ['paged' => $current + 1]), $base_url);
-            echo '<a class="next page-numbers" href="' . esc_url($url) . '">' . esc_html__('Вперед ›', 'wp-suspicious-activity') . '</a>';
+            echo '<a class="next page-numbers" href="' . esc_url($url) . '">' . esc_html__('Вперед ›', 'suspicious-activity') . '</a>';
         }
 
         echo '</div>';
@@ -83,9 +83,9 @@ class WP_SAD_View_Helpers {
 
     public static function render_user_type_filter($selected) {
         $options = [
-            'all'        => __('Всі користувачі', 'wp-suspicious-activity'),
-            'registered' => __('Зареєстровані', 'wp-suspicious-activity'),
-            'admins'     => __('Адміністратори', 'wp-suspicious-activity'),
+            'all'        => __('Всі користувачі', 'suspicious-activity'),
+            'registered' => __('Зареєстровані', 'suspicious-activity'),
+            'admins'     => __('Адміністратори', 'suspicious-activity'),
         ];
 
         $html = '<select id="sad-user-type" name="user_type">';
@@ -99,17 +99,19 @@ class WP_SAD_View_Helpers {
 
     public static function render_timeline($stats) {
         if (empty($stats['timeline_segments'])) {
-            return '<p style="font-size: 11px; color: #666;">' . esc_html__('Недостатньо даних', 'wp-suspicious-activity') . '</p>';
+            return '<p style="font-size: 11px; color: #666;">' . esc_html__('Недостатньо даних', 'suspicious-activity') . '</p>';
         }
 
         $html = '<div class="timeline-bar" data-range-start="' . intval($stats['range_start']) . '" data-range-end="' . intval($stats['range_end']) . '">';
 
         foreach ($stats['timeline_segments'] as $segment) {
             if ($segment['is_gap']) {
+                // translators: %s: the gap's time range, e.g. "2026-09-20 14:03 - 14:05".
+                $gap_title = sprintf(__('Розрив: %s', 'suspicious-activity'), $segment['time_range']);
                 $html .= '<div class="timeline-gap" style="left: ' . esc_attr($segment['start_percent']) . '%; width: ' . esc_attr($segment['width_percent']) . '%;" '
                        . 'data-original-left="' . esc_attr($segment['start_percent']) . '" '
                        . 'data-original-width="' . esc_attr($segment['width_percent']) . '" '
-                       . 'title="' . esc_attr(sprintf(__('Розрив: %s', 'wp-suspicious-activity'), $segment['time_range'])) . '"></div>';
+                       . 'title="' . esc_attr($gap_title) . '"></div>';
             } else {
                 $color = WP_SAD_Session_Analyzer_Color::for_device_count($segment['device_count']);
                 $html .= '<div class="timeline-segment" style="left: ' . esc_attr($segment['start_percent']) . '%; width: ' . esc_attr($segment['width_percent']) . '%; background: ' . esc_attr($color) . ';" '
@@ -124,10 +126,10 @@ class WP_SAD_View_Helpers {
         $html .= '</div>';
 
         $html .= '<div class="timeline-legend">';
-        $html .= '<div class="legend-item"><div class="legend-color" style="background: #4a90e2;"></div>' . esc_html__('1 пристрій', 'wp-suspicious-activity') . '</div>';
-        $html .= '<div class="legend-item"><div class="legend-color" style="background: #f5a623;"></div>' . esc_html__('2 пристрої', 'wp-suspicious-activity') . '</div>';
-        $html .= '<div class="legend-item"><div class="legend-color" style="background: #d0021b;"></div>' . esc_html__('3+ пристрої', 'wp-suspicious-activity') . '</div>';
-        $html .= '<div class="legend-item"><div class="legend-color" style="background: repeating-linear-gradient(45deg, #ddd, #ddd 5px, #f5f5f5 5px, #f5f5f5 10px);"></div>' . esc_html__('Розрив (користувач вийшов)', 'wp-suspicious-activity') . '</div>';
+        $html .= '<div class="legend-item"><div class="legend-color" style="background: #4a90e2;"></div>' . esc_html__('1 пристрій', 'suspicious-activity') . '</div>';
+        $html .= '<div class="legend-item"><div class="legend-color" style="background: #f5a623;"></div>' . esc_html__('2 пристрої', 'suspicious-activity') . '</div>';
+        $html .= '<div class="legend-item"><div class="legend-color" style="background: #d0021b;"></div>' . esc_html__('3+ пристрої', 'suspicious-activity') . '</div>';
+        $html .= '<div class="legend-item"><div class="legend-color" style="background: repeating-linear-gradient(45deg, #ddd, #ddd 5px, #f5f5f5 5px, #f5f5f5 10px);"></div>' . esc_html__('Розрив (користувач вийшов)', 'suspicious-activity') . '</div>';
         $html .= '</div>';
 
         return $html;

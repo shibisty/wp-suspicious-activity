@@ -26,8 +26,8 @@ class WP_SAD_Admin_Menu {
 
     public function register() {
         add_menu_page(
-            __('Підозріла активність', 'wp-suspicious-activity'),
-            __('Підозріла активність', 'wp-suspicious-activity'),
+            __('Підозріла активність', 'suspicious-activity'),
+            __('Підозріла активність', 'suspicious-activity'),
             self::CAP,
             self::SLUG_ACTIVITY,
             [$this, 'render_activity'],
@@ -37,8 +37,8 @@ class WP_SAD_Admin_Menu {
 
         add_submenu_page(
             self::SLUG_ACTIVITY,
-            __('Активність', 'wp-suspicious-activity'),
-            __('Активність', 'wp-suspicious-activity'),
+            __('Активність', 'suspicious-activity'),
+            __('Активність', 'suspicious-activity'),
             self::CAP,
             self::SLUG_ACTIVITY,
             [$this, 'render_activity']
@@ -46,8 +46,8 @@ class WP_SAD_Admin_Menu {
 
         add_submenu_page(
             self::SLUG_ACTIVITY,
-            __('Лог запитів', 'wp-suspicious-activity'),
-            __('Лог запитів', 'wp-suspicious-activity'),
+            __('Лог запитів', 'suspicious-activity'),
+            __('Лог запитів', 'suspicious-activity'),
             self::CAP,
             self::SLUG_REQUEST_LOGS,
             [$this, 'render_request_logs']
@@ -55,18 +55,19 @@ class WP_SAD_Admin_Menu {
 
         add_submenu_page(
             self::SLUG_ACTIVITY,
-            __('Налаштування', 'wp-suspicious-activity'),
-            __('Налаштування', 'wp-suspicious-activity'),
+            __('Налаштування', 'suspicious-activity'),
+            __('Налаштування', 'suspicious-activity'),
             self::CAP,
             self::SLUG_SETTINGS,
             [$this, 'render_settings']
         );
 
-        add_submenu_page(null, __('Перегляд логу', 'wp-suspicious-activity'), '', self::CAP, self::SLUG_LOG_VIEW, [$this, 'render_log_view']);
-        add_submenu_page(null, __('Перегляд активності', 'wp-suspicious-activity'), '', self::CAP, self::SLUG_ACTIVITY_VIEW, [$this, 'render_activity_view']);
+        add_submenu_page(null, __('Перегляд логу', 'suspicious-activity'), '', self::CAP, self::SLUG_LOG_VIEW, [$this, 'render_log_view']);
+        add_submenu_page(null, __('Перегляд активності', 'suspicious-activity'), '', self::CAP, self::SLUG_ACTIVITY_VIEW, [$this, 'render_activity_view']);
     }
 
     public function enqueue_assets($hook) {
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only check of which admin screen is rendering, used only to decide whether to enqueue our own assets; not a state-changing action.
         $page = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '';
         $our_pages = [
             self::SLUG_ACTIVITY,

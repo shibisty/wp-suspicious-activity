@@ -1,0 +1,403 @@
+# Translation of WP Suspicious Activity Detector.
+# This file is distributed under the same license as the WP Suspicious Activity Detector plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Suspicious Activity Detector 5.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22T12:00:24+00:00\n"
+"PO-Revision-Date: 2026-09-22T12:00:24+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: manual-build\n"
+
+msgid "1 пристрій"
+msgstr "1 dispositivo"
+
+msgid "2 пристрої"
+msgstr "2 dispositivi"
+
+msgid "3+ пристрої"
+msgstr "3+ dispositivi"
+
+msgid "API"
+msgstr "API"
+
+msgid "Email користувача:"
+msgstr "Email dell'utente:"
+
+msgid "Heartbeat"
+msgstr "Heartbeat"
+
+msgid "Heartbeat-запити забезпечують точний підрахунок часу, поки вкладка відкрита."
+msgstr "Le richieste heartbeat garantiscono un conteggio preciso del tempo finché la scheda è aperta."
+
+msgid "ID запису"
+msgstr "ID del record"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP-адреса"
+msgstr "Indirizzo IP"
+
+msgid "Session ID"
+msgstr "ID sessione"
+
+msgid "User-Agent"
+msgstr "User-Agent"
+
+msgid "Інтервал (сек)"
+msgstr "Intervallo (sec)"
+
+msgid "Адмінка"
+msgstr "Area amministrativa"
+
+msgid "Адміністратори"
+msgstr "Amministratori"
+
+msgid "Активність"
+msgstr "Attività"
+
+msgid "Аудиторія"
+msgstr "Pubblico"
+
+msgid "Без паралельної активності"
+msgstr "Nessuna attività parallela"
+
+msgid "Високий"
+msgstr "Alto"
+
+msgid "Вперед ›"
+msgstr "Avanti ›"
+
+msgid "Всього записів:"
+msgstr "Totale record:"
+
+msgid "Всі користувачі"
+msgstr "Tutti gli utenti"
+
+msgid "Всі сторінки, API та адмінка (максимальна видимість)"
+msgstr "Tutte le pagine, l'API e l'area amministrativa (massima visibilità)"
+
+msgid "Всі типи"
+msgstr "Tutti i tipi"
+
+msgid "Гість"
+msgstr "Ospite"
+
+msgid "Дата від:"
+msgstr "Data da:"
+
+msgid "Дата до:"
+msgstr "Data a:"
+
+msgid "Дата й час"
+msgstr "Data e ora"
+
+msgid "Детектор підозрілої активності"
+msgstr "Rilevatore di attività sospette"
+
+msgid "Діагностика:"
+msgstr "Diagnostica:"
+
+msgid "Діапазон (хв)"
+msgstr "Intervallo (min)"
+
+msgid "Діапазон = сума всіх активних проміжків (реальний час на сайті)."
+msgstr "Intervallo = somma di tutti gli intervalli attivi (tempo reale sul sito)."
+
+msgid "Діапазон логування"
+msgstr "Ambito di registrazione"
+
+msgid "Дії"
+msgstr "Azioni"
+
+msgid "З"
+msgstr "Da"
+
+msgid "За вказаними критеріями даних не знайдено."
+msgstr "Nessun dato trovato per i criteri indicati."
+
+msgid "За вказаними критеріями записів не знайдено."
+msgstr "Nessun record trovato per i criteri indicati."
+
+msgid "За період:"
+msgstr "Per il periodo:"
+
+msgid "Завжди"
+msgstr "Sempre"
+
+msgid "Запис не знайдено."
+msgstr "Record non trovato."
+
+msgid "Запити"
+msgstr "Richieste"
+
+msgid "Запити сортуються по часу. Якщо розрив між сусідніми запитами ≤ 5 хв — це одна сесія, час додається."
+msgstr "Le richieste sono ordinate per orario. Se l'intervallo tra richieste consecutive è ≤ 5 min, è un'unica sessione e il tempo viene sommato."
+
+msgid "Зареєстровані"
+msgstr "Registrati"
+
+msgid "Застосувати фільтри"
+msgstr "Applica filtri"
+
+msgid "Зберегти налаштування"
+msgstr "Salva impostazioni"
+
+msgid "Збільшити"
+msgstr "Ingrandisci"
+
+msgid "Зменшити"
+msgstr "Riduci"
+
+msgid "Знайдено записів:"
+msgstr "Record trovati:"
+
+msgid "Знайдено користувачів:"
+msgstr "Utenti trovati:"
+
+msgid "Коли логувати"
+msgstr "Quando registrare"
+
+msgid "Користувач"
+msgstr "Utente"
+
+msgid "Користувача не вказано."
+msgstr "Nessun utente specificato."
+
+msgid "Коротке перетинання: %s хв"
+msgstr "Breve sovrapposizione: %s min"
+
+msgid "Курси"
+msgstr "Corsi"
+
+msgid "Лог запитів"
+msgstr "Registro delle richieste"
+
+msgid "Логи"
+msgstr "Log"
+
+msgid "Логувати для всіх (включно з гостями)"
+msgstr "Registra per tutti (ospiti inclusi)"
+
+msgid "Логіка підрахунку часу (сесійний метод):"
+msgstr "Logica di calcolo del tempo (metodo a sessioni):"
+
+msgid "Мова"
+msgstr "Lingua"
+
+msgid "Мова інтерфейсу плагіна"
+msgstr "Lingua dell'interfaccia del plugin"
+
+msgid "Мін. унікальних IP:"
+msgstr "Min. IP univoci:"
+
+msgid "Налаштування"
+msgstr "Impostazioni"
+
+msgid "Налаштування збережено."
+msgstr "Impostazioni salvate."
+
+msgid "Налаштування підозрілої активності"
+msgstr "Impostazioni attività sospette"
+
+msgid "Неактивний"
+msgstr "Inattivo"
+
+msgid "Недостатньо даних"
+msgstr "Dati insufficienti"
+
+msgid "Недостатньо прав"
+msgstr "Permessi insufficienti"
+
+msgid "Немає даних для побудови таймлайну за обраний період."
+msgstr "Nessun dato per costruire la timeline per il periodo selezionato."
+
+msgid "Низький"
+msgstr "Basso"
+
+msgid "Паралельна робота пристроїв: %s хв"
+msgstr "Attività parallela dei dispositivi: %s min"
+
+msgid "Паралельний час = Сумарно − Діапазон. Якщо > 0, пристрої працювали одночасно."
+msgstr "Tempo parallelo = Totale − Intervallo. Se > 0, i dispositivi erano attivi contemporaneamente."
+
+msgid "Паралельно (хв)"
+msgstr "Parallelo (min)"
+
+msgid "Параметри"
+msgstr "Parametri"
+
+msgid "Перевірте діагностику вище."
+msgstr "Controlla la diagnostica qui sopra."
+
+msgid "Перегляд"
+msgstr "Visualizza"
+
+msgid "Перегляд активності"
+msgstr "Vista attività"
+
+msgid "Перегляд логу"
+msgstr "Vista log"
+
+msgid "Переглянути"
+msgstr "Visualizza"
+
+msgid "Перестати логувати"
+msgstr "Interrompi la registrazione"
+
+msgid "Період"
+msgstr "Periodo"
+
+msgid "Показати всі логи цього користувача"
+msgstr "Mostra tutti i log di questo utente"
+
+msgid "Показати ▼"
+msgstr "Mostra ▼"
+
+msgid "Помилка SQL:"
+msgstr "Errore SQL:"
+
+msgid "Пристрої"
+msgstr "Dispositivi"
+
+msgid "Пристрої працювали одночасно"
+msgstr "I dispositivi erano attivi contemporaneamente"
+
+msgid "Пристрій"
+msgstr "Dispositivo"
+
+msgid "Пристрій (User-Agent містить):"
+msgstr "Dispositivo (lo User-Agent contiene):"
+
+msgid "Проміжок часу"
+msgstr "Fascia oraria"
+
+msgid "Підозріла активність"
+msgstr "Attività sospetta"
+
+msgid "Результатів запиту:"
+msgstr "Risultati della query:"
+
+msgid "Ризик"
+msgstr "Rischio"
+
+msgid "Розрив (користувач вийшов)"
+msgstr "Interruzione (l'utente ha lasciato)"
+
+msgid "Розрив: %s"
+msgstr "Interruzione: %s"
+
+msgid "Розривів > 5 хв"
+msgstr "Interruzioni > 5 min"
+
+msgid "Середній"
+msgstr "Medio"
+
+msgid "Сесій"
+msgstr "Sessioni"
+
+msgid "Сесій: %1$d | Розривів > 5 хв: %2$d"
+msgstr "Sessioni: %1$d | Interruzioni > 5 min: %2$d"
+
+msgid "Скинути"
+msgstr "Reimposta"
+
+msgid "До списку входять мовні пакети WordPress, встановлені на сайті, а також переклади, вбудовані в цей плагін."
+msgstr "L'elenco include i pacchetti linguistici di WordPress installati sul sito, oltre alle traduzioni integrate in questo plugin."
+
+msgid "Стан"
+msgstr "Stato"
+
+msgid "Сторінка"
+msgstr "Pagina"
+
+msgid "Сумарно (хв)"
+msgstr "Totale (min)"
+
+msgid "Сумарно по пристроях (хв)"
+msgstr "Totale per dispositivo (min)"
+
+msgid "Сумарно по пристроях = сума активного часу кожного пристрою окремо."
+msgstr "Totale per dispositivo = somma del tempo attivo di ciascun dispositivo separatamente."
+
+msgid "Сусідні запити цього користувача (±15 хв)"
+msgstr "Richieste vicine di questo utente (±15 min)"
+
+msgid "Таблиця:"
+msgstr "Tabella:"
+
+msgid "Тип"
+msgstr "Tipo"
+
+msgid "Тип запиту"
+msgstr "Tipo di richiesta"
+
+msgid "Тип запиту:"
+msgstr "Tipo di richiesta:"
+
+msgid "Тип користувача:"
+msgstr "Tipo di utente:"
+
+msgid "Тільки адмінка та heartbeat"
+msgstr "Solo area amministrativa e heartbeat"
+
+msgid "Тільки для адміністраторів"
+msgstr "Solo per amministratori"
+
+msgid "Тільки для зареєстрованих користувачів"
+msgstr "Solo per utenti registrati"
+
+msgid "Тільки сайт без адмінки та heartbeat"
+msgstr "Solo il sito, senza l'area amministrativa, e heartbeat"
+
+msgid "Тільки сторінки та heartbeat"
+msgstr "Solo pagine e heartbeat"
+
+msgid "Увімкнути heartbeat (пінг, поки вкладка відкрита)"
+msgstr "Attiva heartbeat (ping finché la scheda è aperta)"
+
+msgid "Унікальних user_id:"
+msgstr "user_id univoci:"
+
+msgid "Хто підпадає під логування"
+msgstr "Chi viene registrato"
+
+msgid "Час"
+msgstr "Ora"
+
+msgid "Час доби сайту. Проміжок, що перетинає північ (напр. 22:00–06:00), підтримується."
+msgstr "Ora del giorno del sito. È supportata una fascia che attraversa la mezzanotte (es. 22:00–06:00)."
+
+msgid "Часова шкала"
+msgstr "Timeline"
+
+msgid "Шлях"
+msgstr "Percorso"
+
+msgid "Що логувати"
+msgstr "Cosa registrare"
+
+msgid "Якщо розрив > 5 хв — користувач вийшов, розрив НЕ рахується."
+msgstr "Se l'interruzione è > 5 min, l'utente ha lasciato e l'interruzione NON viene conteggiata."
+
+msgid "по"
+msgstr "a"
+
+msgid "— мова сайту за замовчуванням —"
+msgstr "— lingua predefinita del sito —"
+
+msgid "‹ Назад"
+msgstr "‹ Indietro"
+
+msgid "← До списку активності"
+msgstr "← Torna all'elenco attività"
+
+msgid "← До списку логів"
+msgstr "← Torna all'elenco log"

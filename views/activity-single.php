@@ -20,12 +20,12 @@ $logs_url = add_query_arg([
 $parallel_time = round(max(0, $stats_view['total_device_session_mins'] - $stats_view['total_session_mins']), 2);
 ?>
 <div class="wrap wp-sad-wrapper">
-    <h1 class="wp-heading-inline"><?php esc_html_e('Перегляд активності', 'wp-suspicious-activity'); ?></h1>
-    <a href="<?php echo esc_url($back_url); ?>" class="page-title-action"><?php esc_html_e('← До списку активності', 'wp-suspicious-activity'); ?></a>
+    <h1 class="wp-heading-inline"><?php esc_html_e('Перегляд активності', 'suspicious-activity'); ?></h1>
+    <a href="<?php echo esc_url($back_url); ?>" class="page-title-action"><?php esc_html_e('← До списку активності', 'suspicious-activity'); ?></a>
 
     <?php if (!$user_view && !$user_id_view): ?>
         <div class="wp-sad-empty" style="margin-top:20px;">
-            <strong><?php esc_html_e('Користувача не вказано.', 'wp-suspicious-activity'); ?></strong>
+            <strong><?php esc_html_e('Користувача не вказано.', 'suspicious-activity'); ?></strong>
         </div>
     <?php else: ?>
         <form method="get" style="margin: 15px 0;">
@@ -33,36 +33,36 @@ $parallel_time = round(max(0, $stats_view['total_device_session_mins'] - $stats_
             <input type="hidden" name="user_id" value="<?php echo esc_attr($user_id_view); ?>">
             <div class="wp-sad-filters" style="margin-top:0;">
                 <div class="wp-sad-filter-group">
-                    <label><?php esc_html_e('Дата від:', 'wp-suspicious-activity'); ?></label>
+                    <label><?php esc_html_e('Дата від:', 'suspicious-activity'); ?></label>
                     <input type="date" name="date_from" value="<?php echo esc_attr($date_from_view); ?>">
                 </div>
                 <div class="wp-sad-filter-group">
-                    <label><?php esc_html_e('Дата до:', 'wp-suspicious-activity'); ?></label>
+                    <label><?php esc_html_e('Дата до:', 'suspicious-activity'); ?></label>
                     <input type="date" name="date_to" value="<?php echo esc_attr($date_to_view); ?>">
                 </div>
-                <button type="submit" class="button"><?php esc_html_e('Застосувати фільтри', 'wp-suspicious-activity'); ?></button>
+                <button type="submit" class="button"><?php esc_html_e('Застосувати фільтри', 'suspicious-activity'); ?></button>
             </div>
         </form>
 
         <table class="wp-sad-table" style="max-width:900px;">
             <tbody>
-                <tr><th style="width:220px;"><?php esc_html_e('Користувач', 'wp-suspicious-activity'); ?></th><td><?php echo WP_SAD_View_Helpers::render_user_link($user_id_view, $user_view ? $user_view->user_email : '', $user_view ? $user_view->display_name : ''); ?></td></tr>
-                <tr><th><?php esc_html_e('Період', 'wp-suspicious-activity'); ?></th><td><?php echo esc_html($date_from_view . ' — ' . $date_to_view); ?></td></tr>
-                <tr><th><?php esc_html_e('Сесій', 'wp-suspicious-activity'); ?></th><td><?php echo esc_html($stats_view['session_count']); ?></td></tr>
-                <tr><th><?php esc_html_e('Розривів > 5 хв', 'wp-suspicious-activity'); ?></th><td><?php echo esc_html($stats_view['general_gaps']); ?></td></tr>
-                <tr><th><?php esc_html_e('Діапазон (хв)', 'wp-suspicious-activity'); ?></th><td><?php echo esc_html($stats_view['total_session_mins']); ?></td></tr>
-                <tr><th><?php esc_html_e('Сумарно по пристроях (хв)', 'wp-suspicious-activity'); ?></th><td><?php echo esc_html($stats_view['total_device_session_mins']); ?></td></tr>
-                <tr><th><?php esc_html_e('Паралельно (хв)', 'wp-suspicious-activity'); ?></th><td><?php echo esc_html($parallel_time); ?></td></tr>
+                <tr><th style="width:220px;"><?php esc_html_e('Користувач', 'suspicious-activity'); ?></th><td><?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- WP_SAD_View_Helpers::render_user_link() escapes every dynamic value internally before returning. ?><?php echo WP_SAD_View_Helpers::render_user_link($user_id_view, $user_view ? $user_view->user_email : '', $user_view ? $user_view->display_name : ''); ?></td></tr>
+                <tr><th><?php esc_html_e('Період', 'suspicious-activity'); ?></th><td><?php echo esc_html($date_from_view . ' — ' . $date_to_view); ?></td></tr>
+                <tr><th><?php esc_html_e('Сесій', 'suspicious-activity'); ?></th><td><?php echo esc_html($stats_view['session_count']); ?></td></tr>
+                <tr><th><?php esc_html_e('Розривів > 5 хв', 'suspicious-activity'); ?></th><td><?php echo esc_html($stats_view['general_gaps']); ?></td></tr>
+                <tr><th><?php esc_html_e('Діапазон (хв)', 'suspicious-activity'); ?></th><td><?php echo esc_html($stats_view['total_session_mins']); ?></td></tr>
+                <tr><th><?php esc_html_e('Сумарно по пристроях (хв)', 'suspicious-activity'); ?></th><td><?php echo esc_html($stats_view['total_device_session_mins']); ?></td></tr>
+                <tr><th><?php esc_html_e('Паралельно (хв)', 'suspicious-activity'); ?></th><td><?php echo esc_html($parallel_time); ?></td></tr>
                 <tr>
-                    <th><?php esc_html_e('Ризик', 'wp-suspicious-activity'); ?></th>
+                    <th><?php esc_html_e('Ризик', 'suspicious-activity'); ?></th>
                     <td>
                         <span class="risk-badge risk-<?php echo esc_attr($risk_view['class']); ?>"><?php echo esc_html($risk_view['label']); ?></span>
                         <span style="margin-left:8px; color:#666; font-size:12px;"><?php echo esc_html($risk_view['reason']); ?></span>
                     </td>
                 </tr>
                 <tr>
-                    <th><?php esc_html_e('Дії', 'wp-suspicious-activity'); ?></th>
-                    <td><a href="<?php echo esc_url($logs_url); ?>" class="button" target="_blank"><?php esc_html_e('Показати всі логи цього користувача', 'wp-suspicious-activity'); ?></a></td>
+                    <th><?php esc_html_e('Дії', 'suspicious-activity'); ?></th>
+                    <td><a href="<?php echo esc_url($logs_url); ?>" class="button" target="_blank"><?php esc_html_e('Показати всі логи цього користувача', 'suspicious-activity'); ?></a></td>
                 </tr>
             </tbody>
         </table>
@@ -70,16 +70,17 @@ $parallel_time = round(max(0, $stats_view['total_device_session_mins'] - $stats_
         <?php if (!empty($stats_view['timeline_segments'])): ?>
             <div class="timeline-container" style="max-width:1100px; margin-top:20px;">
                 <div class="timeline-header">
-                    <span><?php esc_html_e('Часова шкала', 'wp-suspicious-activity'); ?></span>
+                    <span><?php esc_html_e('Часова шкала', 'suspicious-activity'); ?></span>
                     <div><span class="timeline-zoom-level">100%</span></div>
                 </div>
                 <div class="timeline-content active">
                     <div class="timeline-wrapper">
                         <div class="timeline-zoom-controls">
-                            <button class="timeline-zoom-btn zoom-out" title="<?php esc_attr_e('Зменшити', 'wp-suspicious-activity'); ?>">−</button>
-                            <button class="timeline-zoom-btn zoom-reset" title="<?php esc_attr_e('Скинути', 'wp-suspicious-activity'); ?>">⌂</button>
-                            <button class="timeline-zoom-btn zoom-in" title="<?php esc_attr_e('Збільшити', 'wp-suspicious-activity'); ?>">+</button>
+                            <button class="timeline-zoom-btn zoom-out" title="<?php esc_attr_e('Зменшити', 'suspicious-activity'); ?>">−</button>
+                            <button class="timeline-zoom-btn zoom-reset" title="<?php esc_attr_e('Скинути', 'suspicious-activity'); ?>">⌂</button>
+                            <button class="timeline-zoom-btn zoom-in" title="<?php esc_attr_e('Збільшити', 'suspicious-activity'); ?>">+</button>
                         </div>
+                        <?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- WP_SAD_View_Helpers::render_timeline() escapes every dynamic value internally before returning. ?>
                         <?php echo WP_SAD_View_Helpers::render_timeline($stats_view); ?>
                     </div>
                     <div class="timeline-time-labels">
@@ -89,7 +90,7 @@ $parallel_time = round(max(0, $stats_view['total_device_session_mins'] - $stats_
                 </div>
             </div>
         <?php else: ?>
-            <p style="margin-top:20px; color:#666;"><?php esc_html_e('Немає даних для побудови таймлайну за обраний період.', 'wp-suspicious-activity'); ?></p>
+            <p style="margin-top:20px; color:#666;"><?php esc_html_e('Немає даних для побудови таймлайну за обраний період.', 'suspicious-activity'); ?></p>
         <?php endif; ?>
     <?php endif; ?>
 </div>

@@ -27,7 +27,7 @@ class WP_SAD_Session_Analyzer {
                   AND DATE(created_at) BETWEEN %s AND %s
                 ORDER BY created_at ASC";
 
-        $all_records = $wpdb->get_results($wpdb->prepare($sql, $user_id, $date_from, $date_to));
+        $all_records = $wpdb->get_results($wpdb->prepare($sql, $user_id, $date_from, $date_to)); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- {$table} comes from WP_SAD_DB::table_name() ($wpdb->prefix), not user input; every real value is bound via $wpdb->prepare() placeholders above.
 
         if (empty($all_records)) {
             return $this->empty_stats();
@@ -212,7 +212,7 @@ class WP_SAD_Session_Analyzer {
                         'start_percent' => (($prev_time - $range_start) / $total_span) * 100,
                         'width_percent' => min($width_percent, 100),
                         'device_count'  => count($active_devices),
-                        'time_range'    => date('Y-m-d H:i', $prev_time) . ' - ' . date('H:i', $event['time'] - 1),
+                        'time_range'    => gmdate('Y-m-d H:i', $prev_time) . ' - ' . gmdate('H:i', $event['time'] - 1),
                         'agent_list'    => $agent_list,
                         'is_gap'        => false,
                     ];
@@ -221,8 +221,8 @@ class WP_SAD_Session_Analyzer {
                         'start_percent' => (($prev_time - $range_start) / $total_span) * 100,
                         'width_percent' => min($width_percent, 100),
                         'device_count'  => 0,
-                        'time_range'    => date('Y-m-d H:i', $prev_time) . ' - ' . date('H:i', $event['time'] - 1),
-                        'agent_list'    => __('Неактивний', 'wp-suspicious-activity'),
+                        'time_range'    => gmdate('Y-m-d H:i', $prev_time) . ' - ' . gmdate('H:i', $event['time'] - 1),
+                        'agent_list'    => __('Неактивний', 'suspicious-activity'),
                         'is_gap'        => true,
                     ];
                     $general_gaps++;
@@ -252,7 +252,7 @@ class WP_SAD_Session_Analyzer {
                     'start_percent' => (($prev_time - $range_start) / $total_span) * 100,
                     'width_percent' => min($width_percent, 100),
                     'device_count'  => count($active_devices),
-                    'time_range'    => date('Y-m-d H:i', $prev_time) . ' - ' . date('Y-m-d H:i', $range_end),
+                    'time_range'    => gmdate('Y-m-d H:i', $prev_time) . ' - ' . gmdate('Y-m-d H:i', $range_end),
                     'agent_list'    => $agent_list,
                     'is_gap'        => false,
                 ];
@@ -261,8 +261,8 @@ class WP_SAD_Session_Analyzer {
                     'start_percent' => (($prev_time - $range_start) / $total_span) * 100,
                     'width_percent' => min($width_percent, 100),
                     'device_count'  => 0,
-                    'time_range'    => date('Y-m-d H:i', $prev_time) . ' - ' . date('Y-m-d H:i', $range_end),
-                    'agent_list'    => __('Неактивний', 'wp-suspicious-activity'),
+                    'time_range'    => gmdate('Y-m-d H:i', $prev_time) . ' - ' . gmdate('Y-m-d H:i', $range_end),
+                    'agent_list'    => __('Неактивний', 'suspicious-activity'),
                     'is_gap'        => true,
                 ];
                 $general_gaps++;
@@ -286,25 +286,28 @@ class WP_SAD_Session_Analyzer {
         if ($parallel_time >= 60) {
             return [
                 'class'  => 'high',
-                'label'  => __('Високий', 'wp-suspicious-activity'),
-                'reason' => sprintf(__('Паралельна робота пристроїв: %s хв', 'wp-suspicious-activity'), $parallel_time),
+                'label'  => __('Високий', 'suspicious-activity'),
+                // translators: %s: number of minutes of parallel device activity.
+                'reason' => sprintf(__('Паралельна робота пристроїв: %s хв', 'suspicious-activity'), $parallel_time),
             ];
         }
 
         if ($parallel_time >= 15) {
             return [
                 'class'  => 'medium',
-                'label'  => __('Середній', 'wp-suspicious-activity'),
-                'reason' => sprintf(__('Паралельна робота пристроїв: %s хв', 'wp-suspicious-activity'), $parallel_time),
+                'label'  => __('Середній', 'suspicious-activity'),
+                // translators: %s: number of minutes of parallel device activity.
+                'reason' => sprintf(__('Паралельна робота пристроїв: %s хв', 'suspicious-activity'), $parallel_time),
             ];
         }
 
         return [
             'class'  => 'low',
-            'label'  => __('Низький', 'wp-suspicious-activity'),
+            'label'  => __('Низький', 'suspicious-activity'),
             'reason' => $parallel_time > 0
-                ? sprintf(__('Коротке перетинання: %s хв', 'wp-suspicious-activity'), $parallel_time)
-                : __('Без паралельної активності', 'wp-suspicious-activity'),
+                // translators: %s: number of minutes of short parallel-device overlap.
+                ? sprintf(__('Коротке перетинання: %s хв', 'suspicious-activity'), $parallel_time)
+                : __('Без паралельної активності', 'suspicious-activity'),
         ];
     }
 

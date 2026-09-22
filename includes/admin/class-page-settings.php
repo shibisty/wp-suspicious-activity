@@ -14,12 +14,12 @@ class WP_SAD_Page_Settings {
 
     public function render() {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('Недостатньо прав', 'wp-suspicious-activity'));
+            wp_die(esc_html__('Недостатньо прав', 'suspicious-activity'));
         }
 
         $saved = false;
 
-        if (isset($_POST['wp_sad_settings_nonce']) && wp_verify_nonce(wp_unslash($_POST['wp_sad_settings_nonce']), self::NONCE_ACTION)) {
+        if (isset($_POST['wp_sad_settings_nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['wp_sad_settings_nonce'])), self::NONCE_ACTION)) {
             WP_SAD_Settings::update([
                 'log_audience'       => sanitize_text_field(wp_unslash($_POST['log_audience'] ?? '')),
                 'log_scope'          => sanitize_text_field(wp_unslash($_POST['log_scope'] ?? '')),

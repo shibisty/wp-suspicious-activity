@@ -21,6 +21,7 @@ class WP_SAD_DB {
     public static function table_exists() {
         global $wpdb;
         $table = self::table_name();
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- schema-check query (SHOW TABLES), not user data; must run uncached to reflect the live schema state.
         $found = $wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table));
         return $found === $table;
     }

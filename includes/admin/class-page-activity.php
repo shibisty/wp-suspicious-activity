@@ -18,11 +18,12 @@ class WP_SAD_Page_Activity {
 
     public function render() {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('Недостатньо прав', 'wp-suspicious-activity'));
+            wp_die(esc_html__('Недостатньо прав', 'suspicious-activity'));
         }
 
         $filters = $this->get_filters();
         $sort = $this->get_sort_params();
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only pagination param on a GET-based list screen, not a state-changing action.
         $paged = max(1, intval($_GET['paged'] ?? 1));
         $offset = ($paged - 1) * $this->per_page;
 
@@ -52,13 +53,13 @@ class WP_SAD_Page_Activity {
 
     private function get_filters() {
         $default_to = current_time('Y-m-d');
-        $default_from = date('Y-m-d', strtotime('-30 days', strtotime($default_to)));
+        $default_from = gmdate('Y-m-d', strtotime('-30 days', strtotime($default_to)));
 
-        $date_from = sanitize_text_field(wp_unslash($_GET['date_from'] ?? $default_from));
-        $date_to   = sanitize_text_field(wp_unslash($_GET['date_to'] ?? $default_to));
-        $min_ips   = max(1, intval($_GET['min_ips'] ?? 1));
-        $email     = sanitize_email(wp_unslash($_GET['email'] ?? ''));
-        $user_type = sanitize_text_field(wp_unslash($_GET['user_type'] ?? 'all'));
+        $date_from = sanitize_text_field(wp_unslash($_GET['date_from'] ?? $default_from)); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $date_to   = sanitize_text_field(wp_unslash($_GET['date_to'] ?? $default_to)); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $min_ips   = max(1, intval($_GET['min_ips'] ?? 1)); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $email     = sanitize_email(wp_unslash($_GET['email'] ?? '')); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
+        $user_type = sanitize_text_field(wp_unslash($_GET['user_type'] ?? 'all')); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based list screen (bookmarkable URLs), not a state-changing action.
 
         if (!in_array($user_type, ['all', 'registered', 'admins'], true)) {
             $user_type = 'all';
@@ -74,8 +75,8 @@ class WP_SAD_Page_Activity {
     }
 
     private function get_sort_params() {
-        $orderby = sanitize_text_field(wp_unslash($_GET['orderby'] ?? 'course_requests'));
-        $order = strtoupper(sanitize_text_field(wp_unslash($_GET['order'] ?? 'DESC')));
+        $orderby = sanitize_text_field(wp_unslash($_GET['orderby'] ?? 'course_requests')); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only sort param on a GET-based list screen, not a state-changing action.
+        $order = strtoupper(sanitize_text_field(wp_unslash($_GET['order'] ?? 'DESC'))); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only sort param on a GET-based list screen, not a state-changing action.
 
         $allowed = ['unique_ips', 'unique_agents', 'total_requests', 'course_requests'];
         if (!in_array($orderby, $allowed, true)) {
@@ -92,7 +93,9 @@ class WP_SAD_Page_Activity {
         global $wpdb;
         $table = WP_SAD_DB::table_name();
 
-        $total_in_table = intval($wpdb->get_var("SELECT COUNT(*) FROM {$table}"));
+        $total_in_table = intval($wpdb->get_var("SELECT COUNT(*) FROM {$table}")); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- {$table} is WP_SAD_DB::table_name() ($wpdb->prefix), not user input; a simple diagnostic count with no user-supplied values.
+
+        // phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- {$table} is WP_SAD_DB::table_name() ($wpdb->prefix), not user input; user-supplied values are bound via prepare() placeholders below.
         $total_in_period = intval($wpdb->get_var($wpdb->prepare(
             "SELECT COUNT(*) FROM {$table} WHERE DATE(created_at) BETWEEN %s AND %s",
             $filters['date_from'], $filters['date_to']
@@ -101,6 +104,7 @@ class WP_SAD_Page_Activity {
             "SELECT COUNT(DISTINCT user_id) FROM {$table} WHERE DATE(created_at) BETWEEN %s AND %s",
             $filters['date_from'], $filters['date_to']
         )));
+        // phpcs:enable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
         return [
             'total_in_table'  => $total_in_table,
@@ -157,7 +161,7 @@ class WP_SAD_Page_Activity {
         $params[] = $per_page;
         $params[] = $offset;
 
-        $results = $wpdb->get_results($wpdb->prepare($sql, $params));
+        $results = $wpdb->get_results($wpdb->prepare($sql, $params)); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- {$table}/{$wpdb->users} are hardcoded/prefix-derived; {$user_type_sql['join']} comes from WP_SAD_Query_Helpers::user_type_sql() (hardcoded fragments only); {$order_sql} is built from $sort['orderby']/$sort['order'], both validated against fixed allow-lists in get_sort_params(); every real user-supplied value is bound via prepare() placeholders.
 
         if ($filters['min_ips'] > 1 && !empty($results)) {
             $results = array_values(array_filter($results, function ($row) use ($filters) {
@@ -220,6 +224,6 @@ class WP_SAD_Page_Activity {
             ) as subquery";
         }
 
-        return intval($wpdb->get_var($wpdb->prepare($sql, $params)));
+        return intval($wpdb->get_var($wpdb->prepare($sql, $params))); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- {$table}/{$wpdb->users} are hardcoded/prefix-derived; {$user_type_sql['join']}/{$connector} come from WP_SAD_Query_Helpers helpers (hardcoded fragments only); every real user-supplied value is bound via prepare() placeholders.
     }
 }

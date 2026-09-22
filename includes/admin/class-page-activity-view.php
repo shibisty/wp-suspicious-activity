@@ -17,15 +17,16 @@ class WP_SAD_Page_Activity_View {
 
     public function render() {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('Недостатньо прав', 'wp-suspicious-activity'));
+            wp_die(esc_html__('Недостатньо прав', 'suspicious-activity'));
         }
 
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter params (user_id, date range) on a GET-based view screen, not a state-changing action.
         $user_id = intval($_GET['user_id'] ?? 0);
 
         $default_to = current_time('Y-m-d');
-        $default_from = date('Y-m-d', strtotime('-30 days', strtotime($default_to)));
-        $date_from = sanitize_text_field(wp_unslash($_GET['date_from'] ?? $default_from));
-        $date_to = sanitize_text_field(wp_unslash($_GET['date_to'] ?? $default_to));
+        $default_from = gmdate('Y-m-d', strtotime('-30 days', strtotime($default_to)));
+        $date_from = sanitize_text_field(wp_unslash($_GET['date_from'] ?? $default_from)); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based view screen, not a state-changing action.
+        $date_to = sanitize_text_field(wp_unslash($_GET['date_to'] ?? $default_to)); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only filter param on a GET-based view screen, not a state-changing action.
 
         $user = $user_id ? get_userdata($user_id) : false;
         $stats = $user_id ? $this->session_analyzer->get_user_sessions($user_id, $date_from, $date_to) : $this->session_analyzer->empty_stats();
